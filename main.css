@@ -22,7 +22,7 @@
 }
 
 .middle {
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   padding: 0 20px;
 }
@@ -34,6 +34,7 @@
 }
 
 .progress-bar {
+  min-height: 61px;
   margin: auto;
   text-align: center;
 }
@@ -83,9 +84,17 @@
   line-height: 40px;
 }
 
+.sector-item {
+  font-size: 18px!important;
+}
+
+.sector-item.active {
+    font-size: 18px!important;
+}
+
 .sector {
-  grid-template-columns: 200px 200px 200px 200px!important;
-  column-gap: 15px!important;
+  grid-template-columns: 190px 190px 190px 190px!important;
+  column-gap: 7px!important;
 }
 
 .checkmark-svg {
