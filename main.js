@@ -65,4 +65,5 @@ function next_page() {
       }
     } catch {}
   }
+  $("#y").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
 }
