@@ -15,18 +15,51 @@
 //   });
 // });
 
+window.onload = (event) => {
+  $("#y").load("https://emreverevc.github.io/wizard-main/main.html");
+};
+
+
 function selection_clicked(element) {
   if (element.classList.contains('active')) {
     element.classList.remove('active');
     element.childNodes[1].style.visibility = "hidden";
+    for (const div in document.querySelectorAll('.selection-item')) {
+      if (document.querySelectorAll('.selection-item')[div].classList.contains('active')) {
+        document.querySelector('.selection-svg').innerHTML = document.querySelectorAll('.selection-item')[div].textContent;
+        document.querySelector('.selection-short-description').innerHTML = document.querySelectorAll('.selection-item')[div].textContent;
+        break
+      }
+      document.querySelector('.selection-svg').innerHTML = 'Choose an option to learn more about it';
+      document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
+    }
   } else {
     element.classList.add('active');
     element.childNodes[1].style.visibility = "visible";
+    document.querySelector('.selection-svg').innerHTML = element.textContent;
+    document.querySelector('.selection-short-description').innerHTML = element.textContent;
   }
 }
 
 function expand_more_info() {
-  growDiv = document.querySelector('.more-info-text')
+  expandDiv = document.querySelector('.more-info-text');
   var wrapper = document.querySelector('.content-area');
-  growDiv.style.height = wrapper.clientHeight + "px";
+  expandDiv.style.height = wrapper.clientHeight + "px";
+  document.querySelectorAll('.learn-more')[0].style.visibility = "hidden";
+}
+
+function collapse_more_info() {
+  collapseDiv = document.querySelector('.more-info-text');
+  collapseDiv.style.height = "0px";
+  document.querySelectorAll('.learn-more')[0].style.visibility = "visible";
+}
+
+function next_page() {
+  var selections = [];
+  for (const blah in document.querySelectorAll('.selection-item')) {
+    if (document.querySelectorAll('.selection-item')[blah].classList.contains('active')) {
+      selections.push(document.querySelectorAll('.selection-item')[blah].innerHTML);
+    }
+  }
+  console.log(selections);
 }
