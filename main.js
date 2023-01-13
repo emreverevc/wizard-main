@@ -16,8 +16,10 @@
 // });
 
 window.onload = (event) => {
-  $("#y").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
+  // $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
 };
+
+var page_number = 0;
 
 
 function selection_clicked(element) {
@@ -26,18 +28,18 @@ function selection_clicked(element) {
     element.childNodes[1].style.visibility = "hidden";
     for (const div in document.querySelectorAll('.selection-item')) {
       if (document.querySelectorAll('.selection-item')[div].classList.contains('active')) {
-        document.querySelector('.selection-svg').innerHTML = document.querySelectorAll('.selection-item')[div].textContent;
         document.querySelector('.selection-short-description').innerHTML = document.querySelectorAll('.selection-item')[div].textContent;
+        document.querySelector('.selection-svg').innerHTML = document.querySelectorAll('.selection-item')[div].textContent;
         break
       }
-      document.querySelector('.selection-svg').innerHTML = 'Choose an option to learn more about it';
       document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
+      document.querySelector('.selection-svg').innerHTML = 'Choose an option to learn more about it';
     }
   } else {
     element.classList.add('active');
     element.childNodes[1].style.visibility = "visible";
-    document.querySelector('.selection-svg').innerHTML = element.textContent;
     document.querySelector('.selection-short-description').innerHTML = element.textContent;
+    document.querySelector('.selection-svg').innerHTML = element.textContent;
   }
 }
 
@@ -57,6 +59,27 @@ function collapse_more_info() {
 }
 
 function next_page() {
+  
+  page_number++;
+
+  switch (page_number) {
+    
+    case 0:
+      break;
+    case 1:
+      document.getElementById("question-content").innerHTML = "";
+      $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
+      break;
+    case 2:
+      document.getElementById("question-content").innerHTML = "";
+      $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
+      break;
+    case 3:
+      break;
+    case 4:
+      break;
+  }
+
   var selections = [];
   for (var item in document.querySelectorAll('.selection-item')) {
     try {
@@ -65,6 +88,27 @@ function next_page() {
       }
     } catch {}
   }
-  document.getElementById("y").innerHTML = "";
-  $("#y").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
+}
+
+function previous_page() {
+  
+  page_number--;
+
+  switch (page_number) {
+    
+    case 0:
+      break;
+    case 1:
+      document.getElementById("question-content").innerHTML = "";
+      $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
+      break;
+    case 2:
+      document.getElementById("question-content").innerHTML = "";
+      $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
+      break;
+    case 3:
+      break;
+    case 4:
+      break;
+  }
 }
