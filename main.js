@@ -16,7 +16,7 @@
 // });
 
 window.onload = (event) => {
-  $("#y").load("https://emreverevc.github.io/wizard-main/main.html");
+  $("#y").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
 };
 
 
@@ -51,15 +51,19 @@ function expand_more_info() {
 function collapse_more_info() {
   collapseDiv = document.querySelector('.more-info-text');
   collapseDiv.style.height = "0px";
-  document.querySelectorAll('.learn-more')[0].style.visibility = "visible";
+  setTimeout(function() {
+    document.querySelectorAll('.learn-more')[0].style.visibility = "visible";
+  }, 500); 
 }
 
 function next_page() {
   var selections = [];
-  for (const blah in document.querySelectorAll('.selection-item')) {
-    if (document.querySelectorAll('.selection-item')[blah].classList.contains('active')) {
-      selections.push(document.querySelectorAll('.selection-item')[blah].innerHTML);
-    }
+  for (var item in document.querySelectorAll('.selection-item')) {
+    try {
+      if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
+        selections.push(document.querySelectorAll('.selection-item')[item].id);
+      }
+    } catch {}
   }
   console.log(selections);
 }
