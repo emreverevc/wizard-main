@@ -151,6 +151,39 @@ function change_selection(selection) {
       description = "Companies that are just starting out";
       svg = idea_svg;
       break;
+
+    case "Consumer":
+      description = "Companies that are just starting out";
+      svg = idea_svg;
+      break;
+    case "Enterprise":
+      description = "Companies that are just starting out";
+      svg = idea_svg;
+      break;
+    case "Deep Tech":
+      description = "Companies that are just starting out";
+      svg = idea_svg;
+      break;
+    case "FinTech":
+      description = "Companies that are just starting out";
+      svg = idea_svg;
+      break;
+    case "Impact":
+      description = "Companies that are just starting out";
+      svg = idea_svg;
+      break;
+    case "Life Sciences":
+      description = "Companies that are just starting out";
+      svg = idea_svg;
+      break;
+    case "Web3":
+      description = "Companies that are just starting out";
+      svg = idea_svg;
+      break;
+    case "Generalist":
+      description = "Companies that are just starting out";
+      svg = idea_svg;
+      break;
     
       
   }
@@ -166,3 +199,5 @@ var growth_svg ='<svg width="200" height="200" viewBox="0 0 200 200" fill="none"
 var low_svg ='<svg width="200" height="200" viewBox="0 0 200 200" fill="none"></svg>';
 var moderate_svg ='<svg width="200" height="200" viewBox="0 0 200 200" fill="none"></svg>';
 var high_svg ='<svg width="200" height="200" viewBox="0 0 200 200" fill="none"></svg>';
+
+var sector_svg ='<svg width="137" height="137" viewBox="0 0 137 137" fill="none"></svg>';
