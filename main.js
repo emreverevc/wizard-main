@@ -20,6 +20,10 @@ window.onload = (event) => {
 };
 
 var page_number = 0;
+var stage_selections = [];
+var sector_selections = [];
+var risk_return_selections = [];
+
 
 
 function selection_clicked(element) {
@@ -76,25 +80,58 @@ function next_page() {
       $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
       break;
     case 2:
+      
+      for (var item in document.querySelectorAll('.selection-item')) {
+        try {
+          if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
+            stage_selections.push(document.querySelectorAll('.selection-item')[item].id);
+          }
+        } catch {}
+      }
+
+      document.getElementById("sector-progress-bar").style.fill = "#E1BD7D";
+      document.getElementById("gold-bar").style.width = "320";
+
       document.getElementById("question-content").innerHTML = "";
       $("#question-content").load("https://emreverevc.github.io/wizard-main/sector-questions.html");
+
       break;
     case 3:
+
+      for (var item in document.querySelectorAll('.selection-item')) {
+        try {
+          if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
+            sector_selections.push(document.querySelectorAll('.selection-item')[item].id);
+          }
+        } catch {}
+      }
+
+      document.getElementById("risk-return-progress-bar").style.fill = "#E1BD7D";
+      document.getElementById("gold-bar").style.width = "520";
+
       document.getElementById("question-content").innerHTML = "";
       $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
       break;
     case 4:
+
+      for (var item in document.querySelectorAll('.selection-item')) {
+        try {
+          if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
+            risk_return_selections.push(document.querySelectorAll('.selection-item')[item].id);
+          }
+        } catch {}
+      }
+
+      document.getElementById("r-progress-bar").style.fill = "#E1BD7D";
+      document.getElementById("gold-bar").style.width = "650";
+
       break;
   }
 
-  var selections = [];
-  for (var item in document.querySelectorAll('.selection-item')) {
-    try {
-      if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
-        selections.push(document.querySelectorAll('.selection-item')[item].id);
-      }
-    } catch {}
-  }
+  console.log(stage_selections);
+  console.log(sector_selections);
+  console.log(risk_return_selections);
+  
 }
 
 function previous_page() {
@@ -105,15 +142,36 @@ function previous_page() {
     case 0:
       break;
     case 1:
+
+      document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
+      document.getElementById("sector-progress-bar").style.fill = "#D9D9D9";
+      document.getElementById("risk-return-progress-bar").style.fill = "#D9D9D9";
+      document.getElementById("r-progress-bar").style.fill = "#D9D9D9";
+      document.getElementById("gold-bar").style.width = "137";
+
       document.getElementById("question-content").innerHTML = "";
       $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
       break;
     case 2:
+
+      document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
+      document.getElementById("sector-progress-bar").style.fill = "#E1BD7D";
+      document.getElementById("risk-return-progress-bar").style.fill = "#D9D9D9";
+      document.getElementById("r-progress-bar").style.fill = "#D9D9D9";
+      document.getElementById("gold-bar").style.width = "320";
+
       document.getElementById("question-content").innerHTML = "";
       $("#question-content").load("https://emreverevc.github.io/wizard-main/sector-questions.html");
       break;
       
     case 3:
+
+      document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
+      document.getElementById("sector-progress-bar").style.fill = "#E1BD7D";
+      document.getElementById("risk-return-progress-bar").style.fill = "#E1BD7D";
+      document.getElementById("r-progress-bar").style.fill = "#D9D9D9";
+      document.getElementById("gold-bar").style.width = "520";
+
       document.getElementById("question-content").innerHTML = "";
       $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
       break;
@@ -154,35 +212,35 @@ function change_selection(selection) {
 
     case "Consumer":
       description = "Companies that are just starting out";
-      svg = idea_svg;
+      svg = sector_svg;
       break;
     case "Enterprise":
       description = "Companies that are just starting out";
-      svg = idea_svg;
+      svg = sector_svg;
       break;
-    case "Deep Tech":
+    case "Deep-Tech":
       description = "Companies that are just starting out";
-      svg = idea_svg;
+      svg = sector_svg;
       break;
     case "FinTech":
       description = "Companies that are just starting out";
-      svg = idea_svg;
+      svg = sector_svg;
       break;
     case "Impact":
       description = "Companies that are just starting out";
-      svg = idea_svg;
+      svg = sector_svg;
       break;
-    case "Life Sciences":
+    case "Life-Sciences":
       description = "Companies that are just starting out";
-      svg = idea_svg;
+      svg = sector_svg;
       break;
     case "Web3":
       description = "Companies that are just starting out";
-      svg = idea_svg;
+      svg = sector_svg;
       break;
     case "Generalist":
       description = "Companies that are just starting out";
-      svg = idea_svg;
+      svg = sector_svg;
       break;
     
       
@@ -200,4 +258,5 @@ var low_svg ='<svg width="200" height="200" viewBox="0 0 200 200" fill="none"></
 var moderate_svg ='<svg width="200" height="200" viewBox="0 0 200 200" fill="none"></svg>';
 var high_svg ='<svg width="200" height="200" viewBox="0 0 200 200" fill="none"></svg>';
 
-var sector_svg ='<svg width="137" height="137" viewBox="0 0 137 137" fill="none"></svg>';
+var sector_svg ='<svg width="130" height="130" viewBox="0 0 130 130" fill="none"></svg>';
+
