@@ -65,5 +65,4 @@ function next_page() {
       }
     } catch {}
   }
-  console.log(selections);
 }
