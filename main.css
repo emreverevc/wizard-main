@@ -83,6 +83,11 @@
   line-height: 40px;
 }
 
+.sector {
+  grid-template-columns: 175px 175px 175px 175px;
+  column-gap: 25px;
+}
+
 .checkmark-svg {
   position: absolute;
   z-index: 2;
