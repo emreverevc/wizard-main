@@ -123,7 +123,6 @@ function previous_page() {
 }
 
 function change_selection(selection) {
-  console.log(selection);
   var description = "";
   var svg = "";
   switch (selection) {
