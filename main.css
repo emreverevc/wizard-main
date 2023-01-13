@@ -84,8 +84,8 @@
 }
 
 .sector {
-  grid-template-columns: 175px 175px 175px 175px;
-  column-gap: 25px;
+  grid-template-columns: 175px 175px 175px 175px!important;
+  column-gap: 25px!important;
 }
 
 .checkmark-svg {
