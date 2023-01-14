@@ -69,7 +69,7 @@ function selection_clicked(element) {
     element.classList.add('active');
     element.childNodes[1].style.visibility = "visible";
     
-    [selection_description, selection_svg] = change_selection(element.id);
+    [selection_description, selection_svg, selection_long_description] = change_selection(element.id);
     
     
     document.querySelector('.selection-short-description').innerHTML = selection_description;
@@ -326,6 +326,7 @@ function previous_page() {
 function change_selection(selection) {
   var description = "";
   var svg = "";
+  var long_description = "";
   switch (selection) {
     case "Idea":
       description = "Companies that are just starting out";
@@ -341,16 +342,19 @@ function change_selection(selection) {
       break;
 
     case "Low":
-      description = "Companies that are just starting out";
+      description = "Your style is to invest in fund managers that consider risk management a core principle in their investment strategy.";
       svg = early_svg;
+      long_description = "Does this sound like your persona? <br><br> You are a structured thinker who understands diversification and timing; you have a data-driven mindset. You value repeatable and scalable investment processes and abhor shoot-from-the-hip diligence. Stable, a lover of solid track records, you separate the wheat from the chaff. You're interested in broad-based exposure to established VC franchises vs. betting on the hot-shot manager looking for the next Facebook. To you, allocating to venture capital funds is a deployment exercise, not the consumption of a romance novel."
       break;
     case "Moderate":
-      description = "Companies that are just starting out";
+      description = "Your style is to invest in fund managers willing to take calculated risks to increase the portfolio's return potential.";
       svg = idea_svg;
+      long_description = "Does this sound like your persona? <br><br> You're a practical, big-picture thinker and don't have time for anything but the best. But you understand that getting the best requires taking risks. You're the kind of person to read about flying cars, drones that combat climate change, ethical supply chains, empowering minority entrepreneurs, or veteran employment technology and want to invest. Taking deep dives into innovation trends excites you. Thematic investing, not spray-and-pray, perfectly balances the upside and downside."
       break;
     case "High":
-      description = "Companies that are just starting out";
+      description = "Your style is to invest in fund managers with the conviction to bet on ideas and trends that are non-consensus today but could be foundational industries in the future.";
       svg = idea_svg;
+      long_description = "Does this sound like your persona? <br><br> You're all about high-octane companies and funds. Deep tech, Web3, brain-machine interfaces and transhumanistic technologies aren't just buzzwords. You have been indoctrinated into the notion that venture capital is a game of outliers and want to find outlier managers investing in moonshots. To you, venture capital is buying a piece of the future."
       break;
 
     case "Consumer":
@@ -410,7 +414,7 @@ function change_selection(selection) {
       
   }
 
-  return [description, svg];
+  return [description, svg, long_description];
 
 }
 
