@@ -92,7 +92,9 @@ function selection_clicked_attributes(element) {
       document.querySelector('.selection-svg').innerHTML = 'Choose an option to learn more about it';
     }
   } else {
+
     element.classList.add('active');
+    
     element.childNodes[1].style.innerHTML = "";
     element.childNodes[1].style.innerHTML = one_svg;
     element.childNodes[1].style.visibility = "visible";
