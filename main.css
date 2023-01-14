@@ -8,6 +8,7 @@
 
 #question-content {
   transition: transform 500ms ease-out, opacity 500ms ease-out;
+  min-height: 574px;
 }
 
 .body-class {
