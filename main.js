@@ -16,13 +16,35 @@
 // });
 
 window.onload = (event) => {
-  // $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
+  // $(".wizard-container").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
+
+  document.querySelector('#next-button').style.visibility = "hidden";
+  // document.querySelector('#previous-button').style.visibility = "hidden";
+  document.querySelector('.progress-bar').style.visibility = "hidden";
+
+  document.getElementById("small-circle").setAttribute('style', 'transform: translateY(-2000px); transition: none;');
+  document.getElementById("big-circle").setAttribute('style', 'transform: translateY(-2500px); transition: none;');
+  document.querySelector(".welcome-screen").setAttribute('style', 'transform: scale(.5); opacity: 0; transition: none')
+
+  setTimeout(function() {
+    document.querySelector(".welcome-screen").setAttribute('style', 'transform: scale(1); opacity: 1; transition: transform 750ms ease-out, opacity 500ms ease-out; transition-delay:1000ms')
+    document.getElementById("small-circle").setAttribute('style', 'transform: none;');
+    document.getElementById("big-circle").setAttribute('style', 'transform: none;');
+  }, 500); 
+
+  
+  
 };
 
 var page_number = 0;
 var stage_selections = [];
 var sector_selections = [];
 var risk_return_selections = [];
+
+function get_started() {
+  document.querySelector('.welcome-screen').remove();
+  next_page();
+}
 
 
 
@@ -70,17 +92,39 @@ function collapse_more_info() {
 function next_page() {
   
   page_number++;
+  
+  document.getElementById("question-content").setAttribute('style', 'transform: scale(.5); opacity: 0;')
+  
+  var big_circle = document.getElementById("big-circle");
+  big_circle.setAttribute('style', 'transform: translateX(-2500px); transition-delay:200ms;');
+
+  var small_circle = document.getElementById("small-circle");
+  small_circle.setAttribute('style', 'transform: translateX(-2500px); transition-delay: 300ms');
+  
+
 
   switch (page_number) {
     
     case 0:
       break;
     case 1:
-      document.getElementById("question-content").innerHTML = "";
-      $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
+      setTimeout(function() {
+        document.getElementById("question-content").innerHTML = "";
+        $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
+        small_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+        big_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+      }, 800); 
+      setTimeout(function() {
+        document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
+        small_circle.setAttribute('style', 'transform: none;');
+        big_circle.setAttribute('style', 'transform: none;');
+        document.querySelector('#next-button').style.visibility = "visible";
+        document.querySelector('.progress-bar').style.visibility = "visible";
+      }, 1100); 
       break;
     case 2:
-      
+
+      document.querySelector('#previous-button').style.visibility = "visible";
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
           if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
@@ -92,8 +136,18 @@ function next_page() {
       document.getElementById("sector-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("gold-bar").style.width = "320";
 
-      document.getElementById("question-content").innerHTML = "";
-      $("#question-content").load("https://emreverevc.github.io/wizard-main/sector-questions.html");
+      
+      setTimeout(function() {
+        document.getElementById("question-content").innerHTML = "";
+        $("#question-content").load("https://emreverevc.github.io/wizard-main/sector-questions.html");
+        small_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+        big_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+      }, 800); 
+      setTimeout(function() {
+        document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
+        small_circle.setAttribute('style', 'transform: none;');
+        big_circle.setAttribute('style', 'transform: none;');
+      }, 1100); 
 
       break;
     case 3:
@@ -109,8 +163,18 @@ function next_page() {
       document.getElementById("risk-return-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("gold-bar").style.width = "520";
 
-      document.getElementById("question-content").innerHTML = "";
-      $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
+      setTimeout(function() {
+        document.getElementById("question-content").innerHTML = "";
+        $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
+        small_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+        big_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+      }, 800); 
+      setTimeout(function() {
+        document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
+        small_circle.setAttribute('style', 'transform: none;');
+        big_circle.setAttribute('style', 'transform: none;');
+      }, 1100); 
+
       break;
     case 4:
 
@@ -142,7 +206,7 @@ function previous_page() {
     case 0:
       break;
     case 1:
-
+      document.querySelector('#previous-button').style.visibility = "hidden";
       document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("sector-progress-bar").style.fill = "#D9D9D9";
       document.getElementById("risk-return-progress-bar").style.fill = "#D9D9D9";

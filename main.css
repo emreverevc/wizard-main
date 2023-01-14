@@ -1,10 +1,22 @@
+#big-circle {
+  transition: transform 1.25s ease-out;
+}
+
+#small-circle {
+  transition: transform 1.2s ease-out;
+}
+
+#question-content {
+  transition: transform 500ms ease-out, opacity 500ms ease-out;
+}
+
 .body-class {
-  background-color: #182C50;
+  /* background-color: #182C50; */
   height:100%;
 }
 .wizard-container {
   max-width: 960px;
-  max-height: 682px;
+  height: 682px;
   margin: auto;
   display: flex;
 }
@@ -16,7 +28,7 @@
 }
 
 .left {
-  /* align-items: center; */
+  /* justify-content: center; */
   justify-content: center;
   text-align: center;
 }
@@ -33,7 +45,65 @@
   text-align: center;
 }
 
+.welcome-screen {
+  margin: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.welcome-screen-title {
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'DM Sans';
+  color: white;
+  font-style: bold;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.welcome-screen-subtitle {
+  margin: auto;
+  font-family: 'DM Sans';
+  color: white;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 29px;
+}
+
+.begin-button {
+  margin: auto;
+  margin-top: 75px;
+  font-family: 'DM Sans';
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 56px;
+
+  background: #E1BD7D;
+  border-radius: 112px;
+  width: 269px;
+  height: 56px;
+
+  cursor: pointer;
+}
+
+.begin-button:hover {
+  text-decoration: underline;
+}
+
+#explorevc-logo {
+  margin-top: 100px;
+  text-align: center;
+}
+
 .progress-bar {
+  visibility: hidden;
   min-height: 61px;
   margin: auto;
   text-align: center;
@@ -162,6 +232,7 @@
 }
 
 .next-button {
+  visibility: hidden;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
