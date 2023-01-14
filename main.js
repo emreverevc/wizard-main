@@ -189,6 +189,19 @@ function next_page() {
       document.getElementById("r-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("gold-bar").style.width = "650";
 
+      setTimeout(function() {
+        document.getElementById("question-content").innerHTML = "";
+        $("#question-content").load("https://emreverevc.github.io/wizard-main/fund-attributes-questions.html");
+        small_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+        big_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+      }, 800); 
+      setTimeout(function() {
+        document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
+        small_circle.setAttribute('style', 'transform: none;');
+        big_circle.setAttribute('style', 'transform: none;');
+      }, 1100); 
+      break;
+
       break;
   }
 
