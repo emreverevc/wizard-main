@@ -169,7 +169,16 @@
 }
 
 .attributes {
+  padding-top:1%!important;
   grid-template-columns: 225px 225px!important;
+}
+
+.attribute-item {
+  font-size: 18px!important;
+}
+
+.attribute-item.active {
+  font-size: 18px!important;
 }
 
 .checkmark-svg {
