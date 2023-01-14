@@ -168,6 +168,10 @@
   column-gap: 7px!important;
 }
 
+.attributes {
+  grid-template-columns: 225px 225px!important;
+}
+
 .checkmark-svg {
   position: absolute;
   z-index: 2;
