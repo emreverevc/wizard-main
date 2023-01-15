@@ -275,7 +275,7 @@ function next_page() {
       setTimeout(function() {
         document.getElementById("small-circle").setAttribute('style', 'transform: translateY(-2000px);');
         document.getElementById("big-circle").setAttribute('style', 'transform: translateY(-2500px);');
-      }, 500); 
+      }, 800); 
       setTimeout(function() {
         document.querySelector('#next-button').style.visibility = "hidden";
         document.querySelector('.progress-bar').style.visibility = "hidden";
