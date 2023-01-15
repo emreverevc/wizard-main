@@ -59,7 +59,7 @@
 .parameters-content {
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 5%;
+    top: 10%;
 }
 
 .parameters-title{
