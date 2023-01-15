@@ -213,14 +213,13 @@ table, th, td, tr {
   text-align: center;
   margin: auto;
   max-width: 720px;
-  min-height: 48px;
+  min-height: 59px;
 }
 
 .selection-svg {
   padding-top: 10%;
-  bottom: 0;
-  min-height: 200px;
-  height:200px;
+  min-height: 300px;
+  height: 300px;
   margin:auto;
   text-align: center;
   padding-bottom: 2.5%;
