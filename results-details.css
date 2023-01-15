@@ -198,6 +198,7 @@
 }
 
 .disclaimer-text {
+    width: 90%
     font-family: 'DM Sans';
     color: #97999b;
     font-size: 12px;
