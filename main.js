@@ -275,12 +275,12 @@ function next_page() {
       setTimeout(function() {
         document.getElementById("small-circle").setAttribute('style', 'transform: translateY(-2000px);');
         document.getElementById("big-circle").setAttribute('style', 'transform: translateY(-2500px);');
-      }, 800); 
+      }, 200); 
       setTimeout(function() {
         document.querySelector('#next-button').style.visibility = "hidden";
         document.querySelector('.progress-bar').style.visibility = "hidden";
         document.querySelector('#previous-button').style.visibility = "hidden";
-      }, 500); 
+      }, 800); 
       
       
 
