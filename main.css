@@ -16,6 +16,7 @@ table, th, td, tr {
   border: 1px solid black;
   border-collapse: collapse;
   font-size: 14px;
+  line-height: 18px;
   table-layout: fixed;
   width: 100%;
 }
@@ -261,7 +262,7 @@ table, th, td, tr {
 
 .more-info-text-content {
 
-  padding: 2.5% 5% 5% 5%;
+  padding: 1% 5% 5% 5%;
   font-family: 'DM Sans';
   font-style: normal;
   font-weight: 400;
