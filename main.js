@@ -15,7 +15,7 @@
 //   });
 // });
 
-window.onload = (event) => {
+document.addEventListener('DOMContentLoaded', function() {
   // $(".wizard-container").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
 
   document.querySelector('#next-button').style.visibility = "hidden";
@@ -34,7 +34,7 @@ window.onload = (event) => {
 
   
   
-};
+});
 
 var page_number = 0;
 var stage_selections = [];

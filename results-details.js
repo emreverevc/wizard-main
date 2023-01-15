@@ -23,7 +23,7 @@ window.addEventListener("scroll", function() {
 
 var page_number = 1;
 
-window.addEventListener("load", function() {
+document.addEventListener('DOMContentLoaded', function() {
     // your code here
 
     $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
