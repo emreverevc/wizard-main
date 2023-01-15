@@ -67,7 +67,7 @@ function next_page() {
     }
 }
 
-function previous() {
+function previous_page() {
     page_number--;
 
     switch(page_number) {
