@@ -21,8 +21,30 @@ window.addEventListener("scroll", function() {
     }   
 });
 
-function expand_parameters (element) {
-    document.getElementsByClassName('parameters-title')[0].classList.toggle("blah");
-    document.getElementsByClassName('asdf')[0].classList.toggle("show");
-    element.classList.toggle("expanded");
+window.onload = (event) => {
+
+const expandableDiv = document.getElementById('parameters-container');
+// Add a click event listener to the expandable div
+expandableDiv.addEventListener("click", function() {
+    document.getElementsByClassName('parameters-title')[0].classList.add("underlined");
+    document.getElementsByClassName('parameters-options')[0].classList.add("show");
+    expandableDiv.classList.add("expanded");
+});
+
+// Add a click event listener to the entire document
+document.addEventListener("click", function(event) {
+    // Check if the target of the click event is not the expandable div
+    if (event.target !== expandableDiv && !event.target.classList.contains("parameter-item")){
+        expandableDiv.classList.remove("expanded");
+        document.getElementsByClassName('parameters-title')[0].classList.remove("underlined");
+        document.getElementsByClassName('parameters-options')[0].classList.remove("show");
+    }
+});
+
+};
+
+
+
+function parameter_item_clicked(element) {
+    element.classList.toggle("active");
 }

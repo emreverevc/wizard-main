@@ -4,24 +4,48 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300&family=DM+Sans:wght@400;500;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
-        <link href="https://emreverevc.github.io/wizard-main/results-details.css" rel="stylesheet">
-        <!-- <link href="/Users/eric/Downloads/wizard-main/results-details.css" rel="stylesheet"> -->
+        <!-- <link href="https://emreverevc.github.io/wizard-main/results-details.css" rel="stylesheet"> -->
+        <link href="/Users/eric/Downloads/wizard-main/results-details.css" rel="stylesheet">
     </sytle>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
     <script src="https://kit.fontawesome.com/2579bd0d80.js" crossorigin="anonymous"></script>
-    <script src="https://emreverevc.github.io/wizard-main/results-details.js"></script>
-    <!-- <script src="/Users/eric/Downloads/wizard-main/results-details.js"></script> -->
+    <!-- <script src="https://emreverevc.github.io/wizard-main/results-details.js"></script> -->
+    <script src="/Users/eric/Downloads/wizard-main/results-details.js"></script>
 </head>
 <div class="body-class">
     <div class="results-container">
         <div class="top-header" style="height: 5%"></div>
         <div class="column left">
-            <div class="parameters-container"  onclick="expand_parameters(this)">
+            <div class="parameters-container"  id="parameters-container">
                 <div class="parameters-content">
                     <div class="parameters-title">Parameters</div>
-                    <div class="asdf">asdfasdfasdf</div>
+                    <div class="parameters-options">
+                        <div class="parameters-subtitle">Stage</div>
+                        <div class="parameters-row">
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)" onclick="parameter_item_clicked(this)">Idea</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Early</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Growth</div>
+                        </div>
+                        <div class="parameters-subtitle">Sector</div>
+                        <div class="parameters-row three-rows">
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Consumer</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Enterprise</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Deep Tech</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">FinTech</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Impact</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Life Sciences</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Web3</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Agnostic</div>
+                        </div>
+                        <div class="parameters-subtitle">Risk / Return Profile</div>
+                        <div class="parameters-row">
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Lower</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">Moderate</div>
+                            <div class="parameter-item" onclick="parameter_item_clicked(this)">High</div>
+                        </div>
+                    </div> 
                 </div>
             </div>     
         </div>
