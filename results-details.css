@@ -185,7 +185,7 @@
 .parameters-container {
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 0px;
+    top: 10px;
 
     text-align: center;
 }
