@@ -138,8 +138,13 @@
 .navigation-box {
     position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 33%;
+    top: 20%;
 }
+
+.sticky {
+    
+}
+
 .next-button {
     margin: 15px 0 15px 0px;
     cursor: pointer;
@@ -198,7 +203,7 @@
 }
 
 .disclaimer-text {
-    width: 90%
+    width: 90%;
     font-family: 'DM Sans';
     color: #97999b;
     font-size: 12px;
