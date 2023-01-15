@@ -6,7 +6,6 @@ window.addEventListener("scroll", function() {
     var lastAnalysisBoxTop = lastAnalysisBox.getBoundingClientRect().top;
     var lastAnalysisBoxBottom = lastAnalysisBox.getBoundingClientRect().bottom;
     var screenHeight = window.innerHeight;
-    console.log(navbar_sticky)
     if (navbar_sticky) {
         if (lastAnalysisBoxTop < screenHeight && lastAnalysisBoxBottom > 0) {
             navigationBox.setAttribute('style', 'position: absolute;');
@@ -21,3 +20,9 @@ window.addEventListener("scroll", function() {
         }
     }   
 });
+
+function expand_parameters (element) {
+    document.getElementsByClassName('parameters-title')[0].classList.toggle("blah");
+    document.getElementsByClassName('asdf')[0].classList.toggle("show");
+    element.classList.toggle("expanded");
+}
