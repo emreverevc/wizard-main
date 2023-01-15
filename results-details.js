@@ -21,7 +21,11 @@ window.addEventListener("scroll", function() {
     }   
 });
 
+var page_number = 1;
+
 window.onload = (event) => {
+
+    $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
 
 // Add a click event listener to the expandable div
 document.addEventListener("click", function(event) {
@@ -46,8 +50,19 @@ document.addEventListener("click", function(event) {
 
 };
 
-
-
 function parameter_item_clicked(element) {
     element.classList.toggle("active");
+}
+
+function next_page() {
+    page_number++;
+
+    switch(page_number) {
+        case 1:
+            break;
+        case 2:
+            document.getElementById('results-container').innerHTML="";
+            $(".results-container").load("https://emreverevc.github.io/wizard-main/results-details-details.html");
+            break;
+    }
 }
