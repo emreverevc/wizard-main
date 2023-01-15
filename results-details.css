@@ -13,7 +13,7 @@
 
     opacity: 0;
     transition: opacity 1000ms ease-in;
-    transition-delay: 1500ms;
+    transition-delay: 500ms;
 }
 
 .column {
