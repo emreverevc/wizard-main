@@ -151,11 +151,14 @@ function next_page() {
   
   document.getElementById("question-content").setAttribute('style', 'transform: scale(.5); opacity: 0;')
   
+  if (page_number < 5) {
   var big_circle = document.getElementById("big-circle");
   big_circle.setAttribute('style', 'transform: translateX(-2500px); transition-delay:200ms;');
 
   var small_circle = document.getElementById("small-circle");
   small_circle.setAttribute('style', 'transform: translateX(-2500px); transition-delay: 300ms');
+  
+  };
   
 
 
