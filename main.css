@@ -32,6 +32,7 @@ table, th, td, tr {
   display: flex;
 }
 
+
 .column {
   flex: 1;
   display: flex;
