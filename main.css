@@ -24,6 +24,8 @@ table, th, td, tr {
 .body-class {
   /* background-color: #182C50; */
   height:100%;
+  visibility: visible;
+  opacity: 1;
 }
 .wizard-container {
   max-width: 960px;
