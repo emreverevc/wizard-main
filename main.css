@@ -11,6 +11,15 @@
   min-height: 574px;
 }
 
+table, th, td, tr {
+  padding: 1%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 14px;
+  table-layout: fixed;
+  width: 100%;
+}
+
 .body-class {
   /* background-color: #182C50; */
   height:100%;
@@ -202,7 +211,8 @@
   color: white;
   text-align: center;
   margin: auto;
-  max-width: 600px;
+  max-width: 720px;
+  min-height: 48px;
 }
 
 .selection-svg {
@@ -244,6 +254,16 @@
 
   background: linear-gradient(180deg, #FFFFFF 80.59%, rgba(255, 255, 255, 0) 123.21%);
   border-radius: 5px;
+}
+
+.more-info-text-content {
+
+  padding: 2.5% 5% 5% 5%;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .next-button {
