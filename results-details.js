@@ -23,7 +23,8 @@ window.addEventListener("scroll", function() {
 
 var page_number = 1;
 
-window.onload = (event) => {
+window.addEventListener("load", function() {
+    // your code here
 
     $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
 
@@ -48,7 +49,7 @@ document.addEventListener("click", function(event) {
     }
 });
 
-};
+});
 
 function parameter_item_clicked(element) {
     element.classList.toggle("active");
