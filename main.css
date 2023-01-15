@@ -220,6 +220,7 @@ table, th, td, tr {
   padding-top: 10%;
   bottom: 0;
   min-height: 200px;
+  height:200px;
   margin:auto;
   text-align: center;
   padding-bottom: 2.5%;
