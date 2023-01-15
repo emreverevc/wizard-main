@@ -266,8 +266,22 @@ function next_page() {
           }
         } catch {}
       }
-      
+
       document.getElementById("gold-bar").style.width = "698";
+      
+      setTimeout(function() {
+        document.getElementById("small-circle").setAttribute('style', 'transform: translateY(-2000px);');
+        document.getElementById("big-circle").setAttribute('style', 'transform: translateY(-2500px);');
+      }, 500); 
+      setTimeout(function() {
+        document.querySelector('#next-button').style.visibility = "hidden";
+        document.querySelector('.progress-bar').style.visibility = "hidden";
+        document.querySelector('#previous-button').style.visibility = "hidden";
+      }, 500); 
+      
+      
+
+      
 
       break;
   }
