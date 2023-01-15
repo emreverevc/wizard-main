@@ -282,6 +282,9 @@ function next_page() {
         document.querySelector('#previous-button').style.visibility = "hidden";
         document.querySelector('#background-rect').setAttribute('style', 'transform: translateY(-2500px); transition: transform 1250ms ease-out; transition-delay: 900ms');
       }, 800); 
+      setTimeout(function() {
+        window.location.replace("https://explorevc.webflow.io/wizard/results");
+      }, 1000)
 
       
 
