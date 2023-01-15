@@ -8,9 +8,6 @@
     /* width: 1200px; */
     margin: auto;
     display: flex;
-    transform: scale(.75);
-    opacity: .5; 
-    transition: transform 750ms 500ms ease-out, opacity 500ms 500ms ease-out;
 }
 
 .column {

@@ -26,8 +26,6 @@ var page_number = 1;
 requestAnimationFrame(function() {
     // your code here
     $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
-    document.querySelector(".results-container").style.transform = 'scale(1)';
-    document.querySelector(".results-container").style.opcacity = '1';
 
 // Add a click event listener to the expandable div
 document.addEventListener("click", function(event) {
@@ -61,6 +59,20 @@ function next_page() {
 
     switch(page_number) {
         case 1:
+            break;
+        case 2:
+            document.getElementById('results-container').innerHTML="";
+            $(".results-container").load("https://emreverevc.github.io/wizard-main/results-details-details.html");
+            break;
+    }
+}
+
+function previous() {
+    page_number--;
+
+    switch(page_number) {
+        case 1:
+            $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
             break;
         case 2:
             document.getElementById('results-container').innerHTML="";
