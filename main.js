@@ -31,7 +31,6 @@ requestAnimationFrame(function() {
     document.getElementById("small-circle").setAttribute('style', 'transform: none;');
     document.getElementById("big-circle").setAttribute('style', 'transform: none;');
   }, 500); 
-
   
   
 });
@@ -45,11 +44,14 @@ var fund_attributes_selections = [];
 var fund_attributes_rank = 0;
 
 function get_started() {
+
   document.querySelector('.welcome-screen').remove();
 
+  document.getElementById('jp-widget').remove();
   document.getElementById('SYRQumJ8et293MJtgc8WNC').remove();
   document.getElementById('jp-widget-inline').remove();
-  
+  document.getElementById('jp-widget-lightbox').remove();
+
   next_page();
 }
 
