@@ -65,6 +65,10 @@ function next_page() {
             document.getElementById('results-container').innerHTML="";
             $(".results-container").load("https://emreverevc.github.io/wizard-main/results-details-details.html");
             break;
+        case 3:
+            document.getElementById('results-container').innerHTML="";
+            $(".results-container").load("https://emreverevc.github.io/wizard-main/results-funds.html");
+        break;
     }
 }
 
@@ -82,7 +86,7 @@ function previous_page() {
         case 3:
             document.getElementById('results-container').innerHTML="";
             $(".results-container").load("https://emreverevc.github.io/wizard-main/results-funds.html");
-            break;
+        break;
             
     }
 }
