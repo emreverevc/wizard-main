@@ -288,3 +288,195 @@
     letter-spacing: 0;
     text-align: left;
 }
+
+
+/* fund rows */
+
+.funds-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    width:95%;
+    margin-top: 25px;
+}
+
+
+.fund-whole-row {
+    display: grid;
+    grid-template-columns: 14fr 1fr;
+    align-items: center;
+  }
+  
+  .fund-row {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr; 
+    border: 1px solid black;
+    border-bottom: 0;
+    height: 80px;
+    align-items:center;
+    cursor: pointer;
+  }
+
+  .fund-selected {
+    border-bottom: 0!important;
+  }
+  
+  
+  .fund-logo-container {
+      display: flex;
+      justify-content: center;
+  }
+  
+  .fund-logo {
+  
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background-size: cover;
+  }
+  
+  .fund-name {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 55px;
+  }
+  
+  .expand-collapse {
+      display: flex;
+      justify-content: center;
+      transition: transform 200ms ease-in;
+  }
+  
+  .remove-fund {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .fund-more-info-container {
+    padding: 0 30 0 30;
+    height: 0px;
+    overflow: hidden;
+    transition: height 300ms ease-in;
+    border-bottom: 1px solid black;
+  }
+  
+  .pill-row{
+    font-family: 'DM Sans';
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 46px;
+    column-gap: 15px;
+  }
+  
+  .pill {
+    font-family: 'DM Sans';
+    font-size: 12px;
+    line-height: 18px;
+    color: white;
+    background: #172C50;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+  }
+  
+  .rating-info-row {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    align-items: start;  
+  }
+  
+  .rating-grid {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .attributes-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .attributes-title {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    margin-top:10px;
+  }
+  
+  .attributes-card {
+    margin-top: 10px;
+    background: #D9D9D9;
+    border-radius: 15px;
+    border: 0px;
+    border-left: 20px;
+    border-style: solid;
+    border-color: green;
+    padding: 10px 10px 10px 10px;
+    
+  }
+
+  .attribute-name {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .attribute-text {
+    padding-bottom: 33px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+
+  }
+
+  .attributes-toggle{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+  }
+  
+  .full-report {
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    background: #172C50;
+    border-radius: 10px;
+    width: 35%;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 36px;
+
+    text-align: center;
+    text-decoration-line: underline;
+
+    color: #FFFFFF;
+    cursor: pointer;
+
+  }
+
+  .full-report:hover {
+    font-weight: 600;
+    /* font-size: 18px; */
+  }

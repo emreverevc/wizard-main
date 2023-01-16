@@ -79,5 +79,25 @@ function previous_page() {
             document.getElementById('results-container').innerHTML="";
             $(".results-container").load("https://emreverevc.github.io/wizard-main/results-details-details.html");
             break;
+        case 3:
+            document.getElementById('results-container').innerHTML="";
+            $(".results-container").load("https://emreverevc.github.io/wizard-main/results-funds.html");
+            break;
+            
+    }
+}
+
+function expand_row(element) {
+    element.classList.toggle("fund-selected");
+    if (element.classList.contains("fund-selected")){
+        element.lastElementChild.setAttribute('style', 'transform: rotate(180deg)')
+        element.parentElement.nextElementSibling.firstElementChild.style.height = element.parentElement.nextElementSibling.firstElementChild.scrollHeight + "px";
+        element.parentElement.nextElementSibling.firstElementChild.style.border = "1px solid black";
+        element.parentElement.nextElementSibling.firstElementChild.style.borderTop = "0";
+    } else {
+        element.lastElementChild.setAttribute('style', 'transform: none')
+        element.parentElement.nextElementSibling.firstElementChild.style.height = "0";
+        // element.parentElement.nextElementSibling.firstElementChild.style.border = "0";
+        // element.parentElement.nextElementSibling.firstElementChild.style.borderTop = "0";
     }
 }
