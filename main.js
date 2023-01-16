@@ -64,11 +64,17 @@ function selection_clicked(element) {
         break
       }
       document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
-      document.querySelector('.selection-svg').innerHTML = 'Choose an option to learn more about it';
+      document.querySelector('.selection-svg').innerHTML = '';
+      document.querySelector('.learn-more').style.visibility = 'hidden';
     }
   } else {
     element.classList.add('active');
     element.childNodes[1].style.visibility = "visible";
+
+    if (document.querySelector('.more-info-text').style.height == "") {
+      document.querySelector('.learn-more').style.visibility = 'visible';
+    }
+
     
     [selection_description, selection_svg, selection_long_description] = change_selection(element.id);
     
@@ -93,7 +99,8 @@ function selection_clicked_attributes(element) {
         break
       }
       document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
-      document.querySelector('.selection-svg').innerHTML = 'Choose an option to learn more about it';
+      document.querySelector('.selection-svg').innerHTML = '';
+      document.querySelector('.learn-more').style.visibility = 'hidden';
     }
   } else {
 
@@ -102,6 +109,10 @@ function selection_clicked_attributes(element) {
     element.classList.add('active');
     element.childNodes[1].innerHTML = "";
     element.childNodes[1].style.visibility = "visible";
+
+    if (document.querySelector('.more-info-text').style.height == "") {
+      document.querySelector('.learn-more').style.visibility = 'visible';
+    }
     
     switch (fund_attributes_rank) {
       case 1:
