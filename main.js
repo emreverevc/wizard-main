@@ -46,7 +46,10 @@ var fund_attributes_rank = 0;
 
 function get_started() {
   document.querySelector('.welcome-screen').remove();
+
+  document.getElementById('SYRQumJ8et293MJtgc8WNC').remove();
   document.getElementById('jp-widget-inline').remove();
+  
   next_page();
 }
 
