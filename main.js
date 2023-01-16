@@ -56,17 +56,20 @@ function selection_clicked(element) {
   if (element.classList.contains('active')) {
     element.classList.remove('active');
     element.childNodes[1].style.visibility = "hidden";
-    for (const div in document.querySelectorAll('.selection-item')) {
-      if (document.querySelectorAll('.selection-item')[div].classList.contains('active')) {
-        [selection_description, selection_svg] = change_selection(document.querySelectorAll('.selection-item')[div].id);
-        document.querySelector('.selection-short-description').innerHTML = selection_description;
-        document.querySelector('.selection-svg').innerHTML = selection_svg;
-        break
-      }
+    if (document.getElementsByClassName('selection-item active').length == 0) {
       document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
       document.querySelector('.selection-svg').innerHTML = '';
       document.querySelector('.learn-more').style.visibility = 'hidden';
-    }
+      document.querySelector('.more-info-text').style.height = "";
+    } else { 
+      [selection_description, selection_svg, selection_long_description] = change_selection(document.getElementsByClassName('selection-item active')[document.getElementsByClassName('selection-item active').length - 1].id);
+      document.querySelector('.selection-short-description').innerHTML = selection_description;
+      document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
+      document.querySelector('.selection-svg').innerHTML = selection_svg;
+      if (document.querySelector('.more-info-text').style.height == "") {
+        document.querySelector('.learn-more').style.visibility = 'visible';
+      };
+    };
   } else {
     element.classList.add('active');
     element.childNodes[1].style.visibility = "visible";
@@ -91,17 +94,20 @@ function selection_clicked_attributes(element) {
     fund_attributes_rank--;
     element.classList.remove('active');
     element.childNodes[1].style.visibility = "hidden";
-    for (const div in document.querySelectorAll('.selection-item')) {
-      if (document.querySelectorAll('.selection-item')[div].classList.contains('active')) {
-        [selection_description, selection_svg] = change_selection(document.querySelectorAll('.selection-item')[div].id);
-        document.querySelector('.selection-short-description').innerHTML = selection_description;
-        document.querySelector('.selection-svg').innerHTML = selection_svg;
-        break
-      }
+    if (document.getElementsByClassName('selection-item active').length == 0) {
       document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
       document.querySelector('.selection-svg').innerHTML = '';
       document.querySelector('.learn-more').style.visibility = 'hidden';
-    }
+      document.querySelector('.more-info-text').style.height = "";
+    } else { 
+      [selection_description, selection_svg, selection_long_description] = change_selection(document.getElementsByClassName('selection-item active')[document.getElementsByClassName('selection-item active').length - 1].id);
+      document.querySelector('.selection-short-description').innerHTML = selection_description;
+      document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
+      document.querySelector('.selection-svg').innerHTML = selection_svg;
+      if (document.querySelector('.more-info-text').style.height == "") {
+        document.querySelector('.learn-more').style.visibility = 'visible';
+      };
+    };
   } else {
 
     fund_attributes_rank++;
@@ -151,10 +157,15 @@ function expand_more_info() {
 
 function collapse_more_info() {
   collapseDiv = document.querySelector('.more-info-text');
-  collapseDiv.style.height = "0px";
-  setTimeout(function() {
-    document.querySelectorAll('.learn-more')[0].style.visibility = "visible";
-  }, 500); 
+  collapseDiv.style.height = "";
+  
+  if (document.querySelectorAll('.selection-item.active').length == 0) {
+
+  } else {
+    setTimeout(function() {
+      document.querySelectorAll('.learn-more')[0].style.visibility = "visible";
+    }, 500); 
+  }
 }
 
 function next_page() {
