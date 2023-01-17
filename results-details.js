@@ -95,10 +95,11 @@ function previous_page() {
 
 function remove_fund(element) {
     element.parentElement.classList.add('off');
+    element.parentElement.nextElementSibling.classList.add('off');
 
     setTimeout(function() {
         element.parentElement.parentElement.remove()
-    }, 1000); 
+    }, 250); 
 
 }
 
