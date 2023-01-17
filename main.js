@@ -101,9 +101,12 @@ function selection_hover(element) {
 
   document.getElementById('selection-image').src = selection_svg;
 
+  document.querySelector('.selection-short-description').style.visibility = "hidden";
+
 }
 
 function selection_unhovered(element) {
+  document.querySelector('.selection-short-description').style.visibility = "visible";
   document.getElementById('selection-image').src = "";
 }
 
