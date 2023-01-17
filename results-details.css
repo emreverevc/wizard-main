@@ -318,27 +318,45 @@
     cursor: pointer;
   }
 
-  .turned-off {
-    animation: turn-off 0.15s ease 0s 1s;
+  .off {
+    animation: screenoff 1s linear forwards;
   }
-
-  @keyframes turn-off {
-	0% {
-		border-width: 0vh;
-		border-left-width: 0vw;
-		border-right-width: 0vw;
-	}
-	50% {
-		border-width: 19.65vw;
-		border-left-width: 10vw;
-		border-right-width: 10vw;
-	}
-	100% {
-		border-width: 19.65vw;
-		border-left-width: 35.1vw;
-		border-right-width: 35.1vw;
-	}
-}
+  
+  @keyframes screenoff {
+    0% {
+      height: 100vh;
+    }
+    10% {
+      background: white;
+    }
+    60% {
+      height: 40px;
+      border-radius: 0%;
+    }
+    70% {
+      height: 20px;
+      border-radius: 20%;
+    }
+    80% {
+      height: 10px;
+      width: 100%;
+    }
+    90% {
+      width: 50%;
+      height: 5px;
+    }
+    95% {
+      height: 2px;
+    }
+    97% {
+      width: 100%;
+    }
+    100% {
+      height: 1px;
+      width: 0;
+      background: white;
+    }
+  }
 
   .fund-selected {
     border-bottom: 0!important;
@@ -375,6 +393,7 @@
   .remove-fund {
     display: flex;
     justify-content: center;
+    cursor: pointer;
   }
   
   .fund-more-info-container {

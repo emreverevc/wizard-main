@@ -94,11 +94,10 @@ function previous_page() {
 }
 
 function remove_fund(element) {
-    element.parentElement.classList.add('turned-off');
+    element.parentElement.classList.add('off');
 
     setTimeout(function() {
-        element.remove();
-        element.parentElement.remove()
+        element.parentElement.parentElement.remove()
     }, 1000); 
 
 }
