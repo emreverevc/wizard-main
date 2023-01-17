@@ -106,8 +106,10 @@ function selection_hover(element) {
 }
 
 function selection_unhovered(element) {
+
   document.querySelector('.selection-short-description').style.visibility = "visible";
   document.getElementById('selection-image').src = "";
+
 }
 
 function selection_clicked_attributes(element) {
@@ -435,41 +437,49 @@ function change_selection(selection) {
     case "Consumer":
       description = "Developing products and services for individual consumers.";
       svg = consumer_svg;
+      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+Enterprise.png';
       long_description = 'This industry is made up of companies that offer products and services to individual customers for personal use or consumption. In this market, the buyers of the product are the consumers themselves. Consumer companies may deliver physical goods to individuals as well as products and services through software programs that operate on computers and mobile devices. <br><br>A few examples of successful consumer startups include Uber, Airbnb, and Spotify.';
       break;
     case "Enterprise":
       description = "Developing products and services for businesses.";
       svg = enterprise_svg;
+      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+Enterprise.png';
       long_description = 'This industry is made up of companies that offer products and services not to individuals, but to large and complicated organizations, each with many different processes and connections. Enterprise companies create software and hardware to streamline workflows, improve communication, and provide access to data, making otherwise complicated business tasks more simple. <br><br>A few examples of successful enterprise startups include Salesforce, Zoom, and Workday.';
       break;
     case "Deep-Tech":
       description = "Developing cutting-edge technologies and solving complex problems.";
       svg = deeptech_svg;
+      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+Deep+Tech.png';
       long_description = 'This industry is made up of companies that create technology based on tangible engineering innovation or scientific advances and discoveries. Deep Tech companies use the latest technological advances to jumpstart new industries and solve bottlenecks in existing sectors. Their core focus is to pioneer new solutions that solve society&#39;s biggest issues; including chronic disease, climate change, clean energy, and food production.<br><br>A few examples of successful Deep Tech startups include DeepMind (Google), OpenAI, and Nutonomy (acquired by Delphi Automotive).';
       break;
     case "FinTech":
       description = "Technology to improve and automate financial services. ";
       svg = fintech_svg;
+      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+FinTech.png';
       long_description = 'This industry, which combines the terms “financial” and “technology”, is made up of companies that utilize technology to enhance or automate financial services and processes. FinTech companies create software, mobile applications, and other technologies to improve and automate traditional forms of finance for businesses and consumers alike. Notable examples include mobile banking, peer-to-peer payment services (i.e Venmo, CashApp), automated portfolio managers (I.e Wealthfront, Betterment), and trading platforms such as Robinhood.<br><br>A few examples of successful FinTech startups include Stripe, Square, and Robinhood.';
       break;
     case "Impact":
       description = "Creating positive social and environmental impact through business.";
       svg = impact_svg;
+      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+Impact.png';
       long_description = 'This industry is made up of companies that have a mission or intent on achieving a specific social or environmental outcome, predominantly through their core products or services. Impact companies address the world&#39s most pressing challenges in sectors such as sustainable agriculture, renewable energy, conservation, microfinance, and affordable and accessible basic services. Impact investors make investments into impact companies with the intention of generating positive, measurable social and environmental impact alongside a financial return. <br><br>A few examples of successful Impact startups include Tesla, Arcadia Power, and CarbonCure Technologies.';
       break;
     case "Life-Sciences":
       description = "Using technology and science to improve human health and well-being.";
       svg = lifesciences_svg;
+      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+Life+Sciences.png';
       long_description = 'This industry is made up of companies that are dedicated to protecting and improving organism life through higher education and innovation, as well as the development of pharmaceuticals, medical technology products and treatments. The Life Sciences sector spans different interests and markets, including biomedicine, pharmaceuticals, biophysics, neuroscience, cell biology, biotechnology, and food processing. Specific areas of application in which Life Science companies are active include artificial intelligence, skin scanning, lasik, and patient monitoring. <br><br>A few examples of successful life sciences startups include Moderna, 23andMe, and Ginkgo Bioworks.';
       break;
     case "Web3":
       description = "Building decentralized applications and protocols on the blockchain.";
       svg = web3_svg;
+      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+Web3.png';
       long_description = 'This industry is made up of companies that are developing a third generation of web technologies. This new form of internet is being built using decentralized blockchains - the shared ledger systems used by cryptocurrencies like Bitcoin and Etherium. Web3 companies, unlike their predecessors in the era of Web2, give businesses total control and ownership, pushing out the middleman or intermediary, and making services more efficient. Decentralization, privacy, security, and machine learning are early principles of this growing industry. <br><br>A few examples of successful Web3 startups include Ethereum, Chainlink and Uniswap.';
       break;
     case "Agnostic":
       description = "Strategies that are not specific to any particular field and has a wide range of products and services.";
       svg = agnostic_svg;
+      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+Agnostic.png';
       long_description = 'Sector Agnostic Funds do not specialize in a specific industry sector. Instead, they represent any company that applies its knowledge, products, and technologies in various industries instead of only one specific industry. Similarly, Sector Agnostic investors are not subject matter experts in any one industry, and will invest in a variety of startups with very different markets, different models, and different technologies. Taking a Sector Agnostic approach in investing means not advocating for one industry only at the exclusion of the others.';
       break;
     
