@@ -95,7 +95,7 @@ function selection_clicked(element) {
   }
 }
 
-function selection_hovered(element) {
+function selection_hover(element) {
 
   [selection_description, selection_svg, selection_long_description] = change_selection(element.id);
 
