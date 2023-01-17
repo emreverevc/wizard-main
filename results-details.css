@@ -318,6 +318,28 @@
     cursor: pointer;
   }
 
+  .turned-off {
+    animation: turn-off 0.15s ease 0s 1s;
+  }
+
+  @keyframes turn-off {
+	0% {
+		border-width: 0vh;
+		border-left-width: 0vw;
+		border-right-width: 0vw;
+	}
+	50% {
+		border-width: 19.65vw;
+		border-left-width: 10vw;
+		border-right-width: 10vw;
+	}
+	100% {
+		border-width: 19.65vw;
+		border-left-width: 35.1vw;
+		border-right-width: 35.1vw;
+	}
+}
+
   .fund-selected {
     border-bottom: 0!important;
   }

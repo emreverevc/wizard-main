@@ -93,6 +93,16 @@ function previous_page() {
     }
 }
 
+function remove_fund(element) {
+    element.parentElement.classList.add('turned-off');
+
+    setTimeout(function() {
+        element.remove();
+        element.parentElement.remove()
+    }, 1000); 
+
+}
+
 function expand_row(element) {
     element.classList.toggle("fund-selected");
     if (element.classList.contains("fund-selected")){
