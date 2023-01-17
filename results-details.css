@@ -319,7 +319,8 @@
   }
 
   .off {
-    animation: screenoff 1s linear forwards;
+    overflow: hidden;
+    animation: screenoff .25s linear forwards;
   }
   
   @keyframes screenoff {
