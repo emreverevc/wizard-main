@@ -47,10 +47,10 @@ function get_started() {
 
   document.querySelector('.welcome-screen').remove();
 
-  // document.getElementById('jp-widget').remove();
-  // document.getElementById('SYRQumJ8et293MJtgc8WNC').remove();
-  // document.getElementById('jp-widget-inline').remove();
-  // document.getElementById('jp-widget-lightbox').remove();
+  document.getElementById('jp-widget').remove();
+  document.getElementById('SYRQumJ8et293MJtgc8WNC').remove();
+  document.getElementById('jp-widget-inline').remove();
+  document.getElementById('jp-widget-lightbox').remove();
 
   next_page();
 }
@@ -232,6 +232,11 @@ function next_page() {
       break;
     case 2:
 
+    document.getElementById('jp-widget').remove();
+    document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
+    document.getElementById('jp-widget-inline').remove();
+    document.getElementById('jp-widget-lightbox').remove();
+
       document.querySelector('#previous-button').style.visibility = "visible";
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
@@ -260,6 +265,12 @@ function next_page() {
       break;
     case 3:
 
+      document.getElementById('jp-widget').remove();
+      document.getElementById('SlOTrlG4knA4TDahEjmToX').remove();
+      document.getElementById('jp-widget-inline').remove();
+      document.getElementById('jp-widget-lightbox').remove();
+        
+      
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
           if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
@@ -286,6 +297,11 @@ function next_page() {
       break;
     case 4:
 
+      document.getElementById('jp-widget').remove();
+      document.getElementById('EfePM3IQmE7aHMhvu8rZuh').remove();
+      document.getElementById('jp-widget-inline').remove();
+      document.getElementById('jp-widget-lightbox').remove();
+
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
           if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
@@ -310,6 +326,11 @@ function next_page() {
       }, 1100); 
       break;
     case 5:
+
+      document.getElementById('jp-widget').remove();
+      document.getElementById('AVQLMNutoYXIm9od0ranMu').remove();
+      document.getElementById('jp-widget-inline').remove();
+      document.getElementById('jp-widget-lightbox').remove();
 
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
