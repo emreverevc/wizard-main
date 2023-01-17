@@ -355,7 +355,7 @@
   }
   
   .fund-more-info-container {
-    padding: 0px 15px 0px 15px;
+    padding: 0px 25px 0px 25px;
     height: 0px;
     overflow: hidden;
     transition: height 300ms ease-in;
@@ -364,7 +364,7 @@
   
   .pill-row{
     font-family: 'DM Sans';
-    font-size: 16px;
+    font-size: 14px;
     line-height: 18px;
     display: flex;
     flex-direction: row;
@@ -375,7 +375,7 @@
   
   .pill {
     font-family: 'DM Sans';
-    font-size: 12px;
+    font-size: 10px;
     line-height: 18px;
     color: white;
     background: #172C50;
