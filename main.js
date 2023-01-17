@@ -103,6 +103,10 @@ function selection_hovered(element) {
 
 }
 
+function selection_unhovered(element) {
+  document.getElementById('selection-image').src = "";
+}
+
 function selection_clicked_attributes(element) {
 
   if (element.classList.contains('active')) {
