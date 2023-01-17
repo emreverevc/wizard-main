@@ -439,7 +439,7 @@ function change_selection(selection) {
     case "Consumer":
       description = "Developing products and services for individual consumers.";
       svg = consumer_svg;
-      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+Enterprise.png';
+      svg = 'https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sector_+Consumer.png';
       long_description = 'This industry is made up of companies that offer products and services to individual customers for personal use or consumption. In this market, the buyers of the product are the consumers themselves. Consumer companies may deliver physical goods to individuals as well as products and services through software programs that operate on computers and mobile devices. <br><br>A few examples of successful consumer startups include Uber, Airbnb, and Spotify.';
       break;
     case "Enterprise":
