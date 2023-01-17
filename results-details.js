@@ -47,7 +47,7 @@ document.addEventListener("click", function(event) {
         document.getElementById('parameters-container').classList.remove("expanded");
         document.getElementsByClassName('parameters-title')[0].classList.remove("underlined");
         document.getElementsByClassName('parameters-options')[0].classList.remove("show");
-        document.getElementById('expand-parameters').style.visibility = "none";
+        document.getElementById('expand-parameters').style.visibility = "visible";
     }
 });
 

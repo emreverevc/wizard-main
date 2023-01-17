@@ -76,12 +76,13 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 31px;
-
+    text-align: center;
     color: #FFFFFF;     
 }
 
 .parameters-title.underlined {
     border-bottom: 2px solid white;
+    text-align: left;
 }
 
 .parameters-options {
