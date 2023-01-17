@@ -100,6 +100,7 @@ function selection_hover(element) {
   [selection_description, selection_svg, selection_long_description] = change_selection(element.id);
 
   document.getElementById('selection-image').src = selection_svg;
+  document.getElementById('selection-image').style.transform = "scale(1)";
 
   document.querySelector('.selection-short-description').style.visibility = "hidden";
 
@@ -108,6 +109,7 @@ function selection_hover(element) {
 function selection_unhovered(element) {
 
   document.querySelector('.selection-short-description').style.visibility = "visible";
+  document.getElementById('selection-image').style.transform = "scale(0)";
   document.getElementById('selection-image').src = "";
 
 }

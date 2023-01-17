@@ -11,6 +11,12 @@
   min-height: 674px;
 }
 
+#selection-image {
+  transform: scale(0);
+  transition: transform 300ms ease-in;
+
+}
+
 table, th, td, tr {
   padding: 1%;
   border: 1px solid black;
