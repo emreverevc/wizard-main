@@ -61,36 +61,46 @@ function selection_clicked(element) {
   if (element.classList.contains('active')) {
     element.classList.remove('active');
     element.childNodes[1].style.visibility = "hidden";
-    if (document.getElementsByClassName('selection-item active').length == 0) {
-      document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
-      document.querySelector('.selection-svg').innerHTML = '';
-      document.querySelector('.learn-more').style.visibility = 'hidden';
-      document.querySelector('.more-info-text').style.height = "";
-    } else { 
-      [selection_description, selection_svg, selection_long_description] = change_selection(document.getElementsByClassName('selection-item active')[document.getElementsByClassName('selection-item active').length - 1].id);
-      document.querySelector('.selection-short-description').innerHTML = selection_description;
-      document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
-      document.querySelector('.selection-svg').innerHTML = selection_svg;
-      if (document.querySelector('.more-info-text').style.height == "") {
-        document.querySelector('.learn-more').style.visibility = 'visible';
-      };
-    };
+    // if (document.getElementsByClassName('selection-item active').length == 0) {
+    //   document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
+    //   document.querySelector('.selection-svg').innerHTML = '';
+    //   document.querySelector('.learn-more').style.visibility = 'hidden';
+    //   document.querySelector('.more-info-text').style.height = "";
+    // } else { 
+    //   [selection_description, selection_svg, selection_long_description] = change_selection(document.getElementsByClassName('selection-item active')[document.getElementsByClassName('selection-item active').length - 1].id);
+    //   document.querySelector('.selection-short-description').innerHTML = selection_description;
+    //   document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
+    //   document.querySelector('.selection-svg').innerHTML = selection_svg;
+    //   if (document.querySelector('.more-info-text').style.height == "") {
+    //     document.querySelector('.learn-more').style.visibility = 'visible';
+    //   };
+    // };
   } else {
     element.classList.add('active');
     element.childNodes[1].style.visibility = "visible";
 
-    if (document.querySelector('.more-info-text').style.height == "") {
-      document.querySelector('.learn-more').style.visibility = 'visible';
-    }
+    // if (document.querySelector('.more-info-text').style.height == "") {
+    //   document.querySelector('.learn-more').style.visibility = 'visible';
+    // }
 
     
     [selection_description, selection_svg, selection_long_description] = change_selection(element.id);
     
+
+
     
-    document.querySelector('.selection-short-description').innerHTML = selection_description;
-    document.querySelector('.selection-svg').innerHTML = selection_svg;
-    document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
+    // document.querySelector('.selection-short-description').innerHTML = selection_description;
+    // document.querySelector('.selection-svg').innerHTML = selection_svg;
+    // document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
   }
+}
+
+function selection_hovered(element) {
+
+  [selection_description, selection_svg, selection_long_description] = change_selection(element.id);
+
+  document.getElementById('selection-image').src = selection_svg;
+
 }
 
 function selection_clicked_attributes(element) {
@@ -99,20 +109,20 @@ function selection_clicked_attributes(element) {
     fund_attributes_rank--;
     element.classList.remove('active');
     element.childNodes[1].style.visibility = "hidden";
-    if (document.getElementsByClassName('selection-item active').length == 0) {
-      document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
-      document.querySelector('.selection-svg').innerHTML = '';
-      document.querySelector('.learn-more').style.visibility = 'hidden';
-      document.querySelector('.more-info-text').style.height = "";
-    } else { 
-      [selection_description, selection_svg, selection_long_description] = change_selection(document.getElementsByClassName('selection-item active')[document.getElementsByClassName('selection-item active').length - 1].id);
-      document.querySelector('.selection-short-description').innerHTML = selection_description;
-      document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
-      document.querySelector('.selection-svg').innerHTML = selection_svg;
-      if (document.querySelector('.more-info-text').style.height == "") {
-        document.querySelector('.learn-more').style.visibility = 'visible';
-      };
-    };
+    // if (document.getElementsByClassName('selection-item active').length == 0) {
+    //   document.querySelector('.selection-short-description').innerHTML = 'Choose an option to learn more about it';
+    //   document.querySelector('.selection-svg').innerHTML = '';
+    //   document.querySelector('.learn-more').style.visibility = 'hidden';
+    //   document.querySelector('.more-info-text').style.height = "";
+    // } else { 
+    //   [selection_description, selection_svg, selection_long_description] = change_selection(document.getElementsByClassName('selection-item active')[document.getElementsByClassName('selection-item active').length - 1].id);
+    //   document.querySelector('.selection-short-description').innerHTML = selection_description;
+    //   document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
+    //   document.querySelector('.selection-svg').innerHTML = selection_svg;
+    //   if (document.querySelector('.more-info-text').style.height == "") {
+    //     document.querySelector('.learn-more').style.visibility = 'visible';
+    //   };
+    // };
   } else {
 
     fund_attributes_rank++;
@@ -121,9 +131,9 @@ function selection_clicked_attributes(element) {
     element.childNodes[1].innerHTML = "";
     element.childNodes[1].style.visibility = "visible";
 
-    if (document.querySelector('.more-info-text').style.height == "") {
-      document.querySelector('.learn-more').style.visibility = 'visible';
-    }
+    // if (document.querySelector('.more-info-text').style.height == "") {
+    //   document.querySelector('.learn-more').style.visibility = 'visible';
+    // }
     
     switch (fund_attributes_rank) {
       case 1:
@@ -147,9 +157,9 @@ function selection_clicked_attributes(element) {
     [selection_description, selection_svg, selection_long_description] = change_selection(element.id);
     
     
-    document.querySelector('.selection-short-description').innerHTML = selection_description;
-    document.querySelector('.selection-svg').innerHTML = selection_svg;
-    document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
+    // document.querySelector('.selection-short-description').innerHTML = selection_description;
+    // document.querySelector('.selection-svg').innerHTML = selection_svg;
+    // document.querySelector('.more-info-text-content').innerHTML = selection_long_description;
   }
 }
 
@@ -380,32 +390,38 @@ function change_selection(selection) {
     case "Idea":
       description = "Funds that invest in pre-revenue companies tackling large addressable market opportunities with a disruptive technological solution.";
       svg = idea_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Investment+Stage_+Idea.png";
       long_description = "Funds that invest in pre-revenue companies tackling large addressable market opportunities with a disruptive technological solution. Although commercialization proof points are still being tested, companies have the lowest valuation and highest upside at this stage. These types of startups are often considered high-risk, high-reward opportunities and are typically only suitable for early-stage investors who are comfortable taking on more risk in exchange for potentially larger returns. However, it's important to note that not all startups in this stage will succeed, and thorough due diligence is crucial to identifying those with the best chance of success."
       break;
     case "Early":
       description = "Funds that invest in fast-growing companies that have product-market-fit and early customers.";
       svg = early_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Investment+Stage_+Early.png";
       long_description = 'Funds that invest in fast-growing companies that have product-market-fit and early customers. These companies face heightened competition due to multiple players operating in the same target market. Valuation ranges can be highly volatile, but market and tech risks have been largely mitigated. Early stage startups have typically demonstrated a viable business model and have shown traction in their target market. This stage is characterized by rapid growth and scaling, and companies at this stage may be looking for funding to support expansion and hiring. Early stage startups may also be looking to enter new markets or launch new products. Investing in these companies can provide investors with more visibility and predictability than in idea stage startups, but also increased competition with other investors.'
       break;
     case "Growth":
       description = "Funds that invest in established companies operating in clearly-defined markets.";
       svg = growth_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Investment+Stage_+Growth.png";
       long_description = "Funds that invest in established companies operating in clearly-defined markets. Valuations here are closely correlated with public market comparables, and the time to exit is predictable. In a race to become market leaders, companies at this stage must start to grapple with the growth vs. profitability equation. These companies are generating significant revenue and have a proven track record of growth, with a clear path to profitability. They have a stable and experienced management team, and have solidified their position in the market. Investors at this stage have a lower risk profile, but also have a lower potential upside. These companies are often looking for funding to support expansion, acquisitions, or to build out their product and service offerings.";
       break;
 
     case "Low":
       description = "Your style is to invest in fund managers that consider risk management a core principle in their investment strategy.";
       svg = low_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Risk+Tolerance_+Low.png";
       long_description = "Does this sound like your persona? <br><br> You are a structured thinker who understands diversification and timing; you have a data-driven mindset. You value repeatable and scalable investment processes and abhor shoot-from-the-hip diligence. Stable, a lover of solid track records, you separate the wheat from the chaff. You're interested in broad-based exposure to established VC franchises vs. betting on the hot-shot manager looking for the next Facebook. To you, allocating to venture capital funds is a deployment exercise, not the consumption of a romance novel."
       break;
     case "Moderate":
       description = "Your style is to invest in fund managers willing to take calculated risks to increase the portfolio's return potential.";
       svg = moderate_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Risk+Tolerance_+Moderate.png";
       long_description = "Does this sound like your persona? <br><br> You're a practical, big-picture thinker and don't have time for anything but the best. But you understand that getting the best requires taking risks. You're the kind of person to read about flying cars, drones that combat climate change, ethical supply chains, empowering minority entrepreneurs, or veteran employment technology and want to invest. Taking deep dives into innovation trends excites you. Thematic investing, not spray-and-pray, perfectly balances the upside and downside."
       break;
     case "High":
       description = "Your style is to invest in fund managers with the conviction to bet on ideas and trends that are non-consensus today but could be foundational industries in the future.";
       svg = high_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Risk+Tolerance_+High.png"
       long_description = "Does this sound like your persona? <br><br> You're all about high-octane companies and funds. Deep tech, Web3, brain-machine interfaces and transhumanistic technologies aren't just buzzwords. You have been indoctrinated into the notion that venture capital is a game of outliers and want to find outlier managers investing in moonshots. To you, venture capital is buying a piece of the future."
       break;
 
@@ -454,26 +470,31 @@ function change_selection(selection) {
     case "Team":
       description = "A strong team dynamic ensures that investment decisions are made consistently and in line with the experience and track record of the team.";
       svg = team_svg;
+      svg= "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Team.png";
       long_description = 'Some sub-categories we drill down into include:<br><div align="left" style="padding-top: 1%;"><table><col style="width:20%"><col style="width:80%"><tbody><tr><td>Operating</td><td>Does the manager have operating experience (including in the specific investment categories)?</td></tr><tr><td>Investing</td><td>Does the manager have investment experience (including in the particular investment categories)?</td></tr><tr><td>Decision Making</td><td>What is the firm&apos;s investment process for due diligence, investment decisions, and portfolio monitoring?</td></tr><tr><td>Bench</td><td>Beyond the key partners, who else is on the investment team? Is there an active advisor and/or operating network?</td></tr></tbody></table></div>'
       break;
     case "Value-Add":
       description = "VCs who can drive value for their portfolio companies post-investment effectively deliver returns in real-time.";
       svg = valueadd_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Value-Add.png";
       long_description = 'Some sub-categories we drill down into include:<br><div align="left" style="padding-top: 1%;"><table><col style="width:20%"><col style="width:80%"><tbody><tr><td>Fundraising</td><td>An aggregate amount of how much follow-on the capital they have helped portfolio companies secure from introductions either same round or after.</td></tr><tr><td>Revenue Generation</td><td>Specific to helping portfolio companies, how does the manager informally/formally generate customer interest or conversion of leads?</td></tr><tr><td>Growth Levers</td><td>How does the manager provide tools for supplementing existing internal resources around HR and GTM-related activities?</td></tr><tr><td>Community Building</td><td>Does the manager have an extended network that can be leveraged and unlocked to help portfolio companies?</td></tr></tbody></table></div>';
       break;
     case "Sourcing":
       description = "A large part of being a successful VC is sourcing the right opportunities and identifying the signal from the noise."
       svg = sourcing_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Sourcing.png";
       long_description = 'Some sub-categories we drill down into include:<br><div align="left" style="padding-top: 1%;"><table><col style="width:20%"><col style="width:80%"><tbody><tr><td>Channels</td><td>Where is the manager sourcing their deals? Does the VC have any unique channels, and how does this help the quality and quantity of deals?</td></tr><tr><td>Funnel Process</td><td>What is the manager&#39;s funnel, and is there a logical/structured process for narrowing opportunities?</td></tr><tr><td>Winning</td><td>How often do they hit their target ownership % OR target check size?</td></tr><tr><td>Signal</td><td>Are they leading deals, and are you taking board seats? Do they have a relationship with these downstream VCs?</td></tr></tbody></table></div>';
       break;
     case "Track-Record":
       description = "In the end, the numbers don't lie. Historical performance is a strong indicator of future success.";
       svg = trackrecord_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Track+Record.png";
       long_description = 'Some sub-categories we drill down into include:<br><div align="left" style="padding-top: 1%;"><table><col style="width:20%"><col style="width:80%"><tbody><tr><td>Historical</td><td>What is the performance of past funds, including track record that might be from previous positions/angel activity?</td></tr><tr><td>Co-investor Strength</td><td>Who are the notable co-investors that have invested alongside the fund manager? What is the manager&#39;s rep within this community?</td></tr><tr><td>Outlier Capture</td><td>This is a specific drill-down of track record that focuses on the manager&#39;s ability to find outliers that drive a large part of the performance. While this is tilted more towards early-stage strategies, it&#39;s translatable to growth and late-stage around the consistency of good returners.</td></tr><tr><td>Follow-on Ratio</td><td>Have any companies received a follow-on round and for how much?</td></tr></tbody></table></div>';
       break;
     case "Firm-Management":
       description = "Good fund managers have substantial fund operating procedures and actively build alignment with their investors.";
       svg = firm_svg;
+      svg = "https://revereoneimgs.s3.us-west-1.amazonaws.com/wizard-images/Firm+Management.png";
       long_description = 'Some sub-categories we drill down into include:<br><div align="left" style="padding-top: 1%;"><table><col style="width:20%"><col style="width:80%"><tbody><tr><td>Portfolio Management</td><td>What is portfolio construction? How often do they stay true to this?</td></tr><tr><td>LP Alignment</td><td>How often is the VC sending LP updates? What are the fund terms?</td></tr><tr><td>Firm Branding</td><td>What is the VC doing in terms of branding for themselves or the fund specifically? This can include speaking events, social media engagements, blogging, etc.</td></tr><tr><td>LP Co-investing</td><td>How is the VC doing co-investing (typically SPVs, opportunity funds or direct checks/same round co-investing)?</td></tr></tbody></table></div>';
       break;
       
