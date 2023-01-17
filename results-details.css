@@ -355,7 +355,7 @@
   }
   
   .fund-more-info-container {
-    padding: 0px 25px 0px 25px;
+    padding: 0px 15px 0px 15px;
     height: 0px;
     overflow: hidden;
     transition: height 300ms ease-in;
