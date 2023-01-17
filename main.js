@@ -47,10 +47,10 @@ function get_started() {
 
   document.querySelector('.welcome-screen').remove();
 
-  document.getElementById('jp-widget').remove();
-  document.getElementById('SYRQumJ8et293MJtgc8WNC').remove();
-  document.getElementById('jp-widget-inline').remove();
-  document.getElementById('jp-widget-lightbox').remove();
+  // document.getElementById('jp-widget').remove();
+  // document.getElementById('SYRQumJ8et293MJtgc8WNC').remove();
+  // document.getElementById('jp-widget-inline').remove();
+  // document.getElementById('jp-widget-lightbox').remove();
 
   next_page();
 }
