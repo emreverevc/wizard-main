@@ -324,7 +324,7 @@
   
   @keyframes screenoff {
     0% {
-      height: 100vh;
+      height: 81px;
     }
     10% {
       background: white;
