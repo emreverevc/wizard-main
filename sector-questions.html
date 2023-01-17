@@ -1,6 +1,6 @@
 <div class="question-text">What is your preference for the industry sectors of the startup companies in which fund managers invest?</div>
       <div class="selection-row sector" style="padding-bottom:1%;">
-        <div class="sector-item selection-item" id="Consumer" onclick="selection_clicked(this)">
+        <div class="sector-item selection-item" id="Consumer" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg-sector" style="visibility:hidden">
             <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -9,7 +9,7 @@
           </div>
           Consumer
         </div>
-        <div class="sector-item selection-item" id="Enterprise" onclick="selection_clicked(this)">
+        <div class="sector-item selection-item" id="Enterprise" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg-sector" style="visibility:hidden">
             <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -18,7 +18,7 @@
           </div>
           Enterprise
         </div>
-        <div class="sector-item selection-item" id="Deep-Tech" onclick="selection_clicked(this)">
+        <div class="sector-item selection-item" id="Deep-Tech" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg-sector" style="visibility:hidden">
             <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -27,7 +27,7 @@
           </div>
           Deep Tech
         </div>
-        <div class="sector-item selection-item" id="FinTech" onclick="selection_clicked(this)">
+        <div class="sector-item selection-item" id="FinTech" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
             <div class="checkmark-svg-sector" style="visibility:hidden">
               <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -47,7 +47,7 @@
           </div>
           Impact
         </div>
-        <div class="sector-item selection-item" id="Life-Sciences" onclick="selection_clicked(this)">
+        <div class="sector-item selection-item" id="Life-Sciences" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg-sector" style="visibility:hidden">
             <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -56,7 +56,7 @@
           </div>
           Life Sciences
         </div>
-        <div class="sector-item selection-item" id="Web3" onclick="selection_clicked(this)">
+        <div class="sector-item selection-item" id="Web3" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg-sector" style="visibility:hidden">
             <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -65,7 +65,7 @@
           </div>
           Web3
         </div>
-        <div class="sector-item selection-item" id="Agnostic" onclick="selection_clicked(this)">
+        <div class="sector-item selection-item" id="Agnostic" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
             <div class="checkmark-svg-sector" style="visibility:hidden">
               <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -76,14 +76,11 @@
           </div>
       </div>
       <div class="content-area">
-        <!-- <div class="more-info-text">
-          Work in Progress
-        </div> -->
-        <div class="selection-short-description">Choose an option to learn more about it</div>
-        <div class="selection-svg" style="color:white; height: 236px!important; min-height: 236px!important;">
-          <svg width="197" height="236" viewBox="0 0 197 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="selection-short-description">Hover over an option to learn more about it</div>
+        </div><img id="selection-image" src=""></div>
+        <!-- <div class="selection-svg" style="color:white;">
+          <svg width="197" height="300" viewBox="0 0 197 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           </svg>
-        </div>
         <div class="learn-more" style="visibility: hidden;" onclick="expand_more_info()">
           <div class="learn-more-text"><i class="fa-solid fa-arrow-up"></i>&emsp;&emsp;Learn More</div>
         </div>
@@ -92,5 +89,5 @@
             <div class="learn-more-text"><i class="fa-solid fa-arrow-down"></i>&emsp;&emsp;See Less</div>
           </div>
           <div class="more-info-text-content"></div>
-        </div>
+        </div> -->
       </div>

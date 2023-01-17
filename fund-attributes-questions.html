@@ -1,6 +1,6 @@
 <div class="question-text">What qualities in fund managers do you appreciate and value? Rank from most (1) to least (5) important.</div>
       <div class="selection-row" style="padding-bottom:1%">
-        <div class="selection-item attribute-item" id="Team" onclick="selection_clicked_attributes(this)">
+        <div class="selection-item attribute-item" id="Team" onclick="selection_clicked_attributes(this)" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg" style="visibility:hidden">
             <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19.755 7.45252V19.8113H1.4225V1.55879H18.61L20.0325 0.142548H0V21.2275H21.1781V6.03629L19.755 7.45252Z" fill="white"/>
@@ -9,7 +9,7 @@
           </div>
           Team
         </div>
-        <div class="selection-item attribute-item" id="Value-Add" onclick="selection_clicked_attributes(this)">
+        <div class="selection-item attribute-item" id="Value-Add" onclick="selection_clicked_attributes(this)" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg" style="visibility:hidden">
             <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -18,7 +18,7 @@
           </div>
           Value-Add
         </div>
-        <div class="selection-item attribute-item" id="Sourcing" onclick="selection_clicked_attributes(this)">
+        <div class="selection-item attribute-item" id="Sourcing" onclick="selection_clicked_attributes(this)" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg" style="visibility:hidden">
             <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="selection-row attributes">
-        <div class="selection-item attribute-item" id="Track-Record" onclick="selection_clicked_attributes(this)">
+        <div class="selection-item attribute-item" id="Track-Record" onclick="selection_clicked_attributes(this)"onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg" style="visibility:hidden">
             <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -38,7 +38,7 @@
           </div>
           Track Record
         </div>
-        <div class="selection-item attribute-item" id="Firm-Management" onclick="selection_clicked_attributes(this)">
+        <div class="selection-item attribute-item" id="Firm-Management" onclick="selection_clicked_attributes(this)" onmouseover="selection_hover(this)"  onmouseout="selection_unhovered(this)">
           <div class="checkmark-svg" style="visibility:hidden">
             <svg width="30" height="38" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16.5954 26.2332L10.1011 19.7674L12.4614 17.4168L16.5954 21.5329L32.5309 5.66724L34.8913 8.0178L16.5954 26.2332Z" fill="white"/>
@@ -49,14 +49,11 @@
         </div>
       </div>
       <div class="content-area">
-        <!-- <div class="more-info-text">
-          Work in Progress
-        </div> -->
-        <div class="selection-short-description">Choose an option to learn more about it</div>
-        <div class="selection-svg" style="color:white; height: 236px!important; min-height: 236px!important;">
-          <svg width="197" height="236" viewBox="0 0 197 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="selection-short-description">Hover over an option to learn more about it</div>
+        </div><img id="selection-image" src=""></div>
+        <!-- <div class="selection-svg" style="color:white;">
+          <svg width="197" height="300" viewBox="0 0 197 200" fill="none" xmlns="http://www.w3.org/2000/svg">
           </svg>
-        </div>
         <div class="learn-more" style="visibility: hidden;" onclick="expand_more_info()">
           <div class="learn-more-text"><i class="fa-solid fa-arrow-up"></i>&emsp;&emsp;Learn More</div>
         </div>
@@ -65,5 +62,5 @@
             <div class="learn-more-text"><i class="fa-solid fa-arrow-down"></i>&emsp;&emsp;See Less</div>
           </div>
           <div class="more-info-text-content"></div>
-        </div>
+        </div> -->
       </div>
