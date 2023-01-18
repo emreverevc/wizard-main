@@ -1,5 +1,6 @@
 var navbar_sticky = true;
 window.addEventListener("scroll", function() {
+    
 
     var lastAnalysisBox = document.getElementById("last-extraspace");
     var navigationBox = document.getElementsByClassName("navigation-box")[0];
@@ -25,6 +26,10 @@ var page_number = 1;
 
 requestAnimationFrame(function() {
     // your code here
+
+    var selection_indexes = window.location.href.split("?")[1];
+    checkIntegers(selection_indexes);
+
     $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
     document.querySelector(".results-container").style.opacity = '1';
 
@@ -115,5 +120,72 @@ function expand_row(element) {
         element.parentElement.nextElementSibling.firstElementChild.style.height = "0";
         // element.parentElement.nextElementSibling.firstElementChild.style.border = "0";
         // element.parentElement.nextElementSibling.firstElementChild.style.borderTop = "0";
+    }
+}
+
+function checkIntegers(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (!Number.isInteger(arr[i])) {
+            throw new Error(`Value at index ${i} is not an integer.`);
+        }
+    }
+}
+
+
+function findSimilarItems(newEntry, dataset) {
+
+    let similarityScores = [];
+    
+    for (let i = 0; i < dataset.length; i++) {
+    
+      let item = dataset[i];
+      
+      let sumOfLeastSquares = 0.0;
+      
+      for (let j = 0; j < item.length; j++) {
+              if (j == 1) {
+            //compare sector
+          for (let k = 0; k < newEntry[j].length; k++) {
+              //console.log(newEntry[j][k])
+            if (newEntry[j][k] == item[j]) {
+                sumOfLeastSquares -= 200;
+            }
+          } 
+        } else if (j == 3) {
+            //compare attribute
+            for (let w = 0; w < newEntry[j].length; w++) {
+              if (newEntry[j][w] == item[j][0] || newEntry[j][w] == item[j][1]) {
+                sumOfLeastSquares -= 100;
+              }
+          }
+        } else {
+            //compare other sftuff 
+          sumOfLeastSquares += Math.pow(item[j] - newEntry[j], 2);
+        }
+      }
+      similarityScores.push([i,sumOfLeastSquares]);
+    }
+    var sortedArray = similarityScores.sort(function(a, b) {
+    return a[1] - b[1];
+  });
+  
+    top_five_array = sortedArray.slice(0, 5).map(sortedArray => sortedArray[0]);
+  
+    return top_five_array;
+  }
+  
+  let fund_characteristics_indexes = [[1,3,2,[10,10]],[1,1,2,[5,2]],[3,8,1,[3,5]],[3,2,1,[2,3]],[1,2,3,[4,2]],[1,4,3,[3,4]],[2,3,1,[1,3]],[1,7,3,[10,10]],[2,6,2,[2,4]],[2,1,2,[3,4]],[1,6,2,[3,3]],[1,2,1,[1,3]],[1,2,3,[10,10]],[2,5,3,[1,1]],[1,3,1,[5,4]],[1,2,3,[4,2]],[2,3,3,[2,2]],[1,4,3,[2,2]],[1,1,1,[3,4]],[1,2,3,[3,3]],[1,3,3,[3,4]],[1,8,2,[4,2]],[1,4,2,[3,2]],[1,3,3,[10,10]],[2,4,2,[2,2]],[2,3,3,[1,1]],[1,3,3,[5,2]],[1,5,1,[2,2]],[1,2,2,[2,3]],[1,1,2,[2,3]],[2,5,2,[5,3]],[1,1,2,[3,4]],[1,3,3,[4,2]],[1,3,3,[1,2]],[3,2,2,[2,5]],[1,8,3,[10,10]],[1,6,3,[10,10]],[2,5,3,[1,2]],[1,8,2,[2,2]],[1,7,2,[5,1]],[3,6,3,[1,2]],[1,5,3,[10,10]],[2,2,2,[2,1]],[1,8,3,[10,10]],[2,8,2,[2,5]],[1,3,3,[10,10]],[1,2,1,[4,3]],[1,6,3,[10,10]],[1,3,3,[10,10]],[1,8,3,[10,10]],[2,2,1,[1,2]],[2,5,3,[1,3]],[1,4,3,[10,10]],[1,2,2,[2,1]],[1,2,3,[10,10]],[1,5,3,[10,10]]];
+  
+  
+  function getDictionaryEntry(dictionary, index) {
+    let keys = Object.keys(dictionary);
+    return dictionary[keys[index]].Sector;
+  }
+
+function checkIntegers(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (!Number.isInteger(arr[i])) {
+            throw new Error(`Value at index ${i} is not an integer.`);
+        }
     }
 }
