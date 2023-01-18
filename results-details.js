@@ -28,7 +28,7 @@ requestAnimationFrame(function() {
     // your code here
 
     var selection_indexes = window.location.href.split("?")[1];
-    checkIntegers(selection_indexes);
+    checkNumbers(selection_indexes);
 
     $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
     document.querySelector(".results-container").style.opacity = '1';
@@ -182,9 +182,9 @@ function findSimilarItems(newEntry, dataset) {
     return dictionary[keys[index]].Sector;
   }
 
-function checkIntegers(arr) {
+function checkNumbers(arr) {
     for (let i = 0; i < arr.length; i++) {
-        if (!Number.isInteger(arr[i])) {
+        if (!Number.isInteger(arr[i]) || !Number.isDecimal(arr[i])) {
             throw new Error(`Value at index ${i} is not an integer.`);
         }
     }
