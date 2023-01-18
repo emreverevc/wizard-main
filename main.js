@@ -367,7 +367,7 @@ function next_page() {
         document.querySelector('#background-rect').setAttribute('style', 'transform: translateY(-2500px); transition: transform 1250ms ease-out; transition-delay: 900ms');
       }, 1000); 
       setTimeout(function() {
-        window.location.replace("https://explorevc.webflow.io/wizard/results");
+        window.location.replace("https://explorevc.webflow.io/wizard/results/?" + JSON.stringify(selection_array));
       }, 1250)
 
       
@@ -593,6 +593,7 @@ var agnostic_svg = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://
 
 // brainz
 
+var similar_indexes = findSimilarItems(selection_array, fund_characteristics_indexes);
 
 function removeItemOnce(arr, value) {
   var index = arr.indexOf(value);
@@ -656,7 +657,7 @@ function findSimilarItems(newEntry, dataset) {
         for (let k = 0; k < newEntry[j].length; k++) {
         	//console.log(newEntry[j][k])
           if (newEntry[j][k] == item[j]) {
-          	sumOfLeastSquares -= 100;
+          	sumOfLeastSquares -= 200;
           }
         } 
       } else if (j == 3) {
@@ -676,19 +677,20 @@ function findSimilarItems(newEntry, dataset) {
   var sortedArray = similarityScores.sort(function(a, b) {
   return a[1] - b[1];
 });
-  return sortedArray;
+
+  top_five_array = sortedArray.slice(0, 5).map(sortedArray => sortedArray[0]);
+
+  return top_five_array;
 }
 
-// test the function
-let newEntry = [1, [2], 5,[0]];
-let dataset = [
-  [1, 2, 5, [0,1]],
-  [1, 2, 4, [2,1]],
-  [2, 3, 5, [0,2]],
-  [2, 1, 7, [1,4]],
-  [3, 1, 2, [0,5]],
-  [1, 2, 5, [0,4]]
-];
+let fund_characteristics_indexes = [[1,3,2,[10,10]],[1,1,2,[5,2]],[3,8,1,[3,5]],[3,2,1,[2,3]],[1,2,3,[4,2]],[1,4,3,[3,4]],[2,3,1,[1,3]],[1,7,3,[10,10]],[2,6,2,[2,4]],[2,1,2,[3,4]],[1,6,2,[3,3]],[1,2,1,[1,3]],[1,2,3,[10,10]],[2,5,3,[1,1]],[1,3,1,[5,4]],[1,2,3,[4,2]],[2,3,3,[2,2]],[1,4,3,[2,2]],[1,1,1,[3,4]],[1,2,3,[3,3]],[1,3,3,[3,4]],[1,8,2,[4,2]],[1,4,2,[3,2]],[1,3,3,[10,10]],[2,4,2,[2,2]],[2,3,3,[1,1]],[1,3,3,[5,2]],[1,5,1,[2,2]],[1,2,2,[2,3]],[1,1,2,[2,3]],[2,5,2,[5,3]],[1,1,2,[3,4]],[1,3,3,[4,2]],[1,3,3,[1,2]],[3,2,2,[2,5]],[1,8,3,[10,10]],[1,6,3,[10,10]],[2,5,3,[1,2]],[1,8,2,[2,2]],[1,7,2,[5,1]],[3,6,3,[1,2]],[1,5,3,[10,10]],[2,2,2,[2,1]],[1,8,3,[10,10]],[2,8,2,[2,5]],[1,3,3,[10,10]],[1,2,1,[4,3]],[1,6,3,[10,10]],[1,3,3,[10,10]],[1,8,3,[10,10]],[2,2,1,[1,2]],[2,5,3,[1,3]],[1,4,3,[10,10]],[1,2,2,[2,1]],[1,2,3,[10,10]],[1,5,3,[10,10]]];
+
+
+function getDictionaryEntry(dictionary, index) {
+  let keys = Object.keys(dictionary);
+  return dictionary[keys[index]].Sector;
+}
+
 console.log(findSimilarItems(newEntry, dataset));
 
 
@@ -696,5 +698,10 @@ console.log(findSimilarItems(newEntry, dataset));
 function firstElements(arrays) {
     return arrays.map(array => array[0]);
 }
+
+
+
+let funds_array = [{FundName: "541 Cornerstone Fund I" ,Sector : "Deep Tech"},{FundName: "Coyote Ventures Fund I" ,Sector : "Consumer"},{FundName: "Blitzscaling Ventures Fund I" ,Sector : "Agnostic"},{FundName: "B37 Ventures Fund II" ,Sector : "Enterprise"},{FundName: "Preface Ventures Fund III" ,Sector : "Enterprise"},{FundName: "Flex Capital Fund I" ,Sector : "FinTech"},{FundName: "Benhamou Global Ventures Opportunity Fund II" ,Sector : "Deep Tech"},{FundName: "Chainforest Fund I" ,Sector : "Web3"},{FundName: "Plum Alley Ventures Fund I" ,Sector : "Life Sciences"},{FundName: "Recharge Thematic Ventures Fund I" ,Sector : "Consumer"},{FundName: "Cortado Ventures II" ,Sector : "Life Sciences"},{FundName: "Illuminate Ventures III" ,Sector : "Enterprise"},{FundName: "Ganas Ventures Fund I" ,Sector : "Enterprise"},{FundName: "First Bight Fund I" ,Sector : "Impact"},{FundName: "Recursive Ventures Fund III" ,Sector : "Deep Tech"},{FundName: "Incisive Ventures Fund I" ,Sector : "Enterprise"},{FundName: "Sancus Ventures" ,Sector : "Deep Tech"},{FundName: "Feld Ventures Fund I" ,Sector : "FinTech"},{FundName: "Maven Ventures Fund IV" ,Sector : "Consumer"},{FundName: "Designer Fund III" ,Sector : "Enterprise"},{FundName: "GFT Ventures I" ,Sector : "Deep Tech"},{FundName: "Wayfinder Ventures II" ,Sector : "Agnostic"},{FundName: "Fiat Ventures Fund I" ,Sector : "FinTech"},{FundName: "Silicon Roundabout Ventures Fund I" ,Sector : "Deep Tech"},{FundName: "AFG Partners I" ,Sector : "FinTech"},{FundName: "Impact X Capital Fund" ,Sector : "Deep Tech"},{FundName: "Supernode Global Fund II" ,Sector : "Deep Tech"},{FundName: "Better Ventures Fund IV" ,Sector : "Impact"},{FundName: "REFASHIOND Fund I" ,Sector : "Enterprise"},{FundName: "Alpine VC Fund I" ,Sector : "Consumer"},{FundName: "Beyond Capital Ventures Fund II" ,Sector : "Impact"},{FundName: "Looking Glass Capital Fund II" ,Sector : "Consumer"},{FundName: "Starship Ventures Fund II" ,Sector : "Deep Tech"},{FundName: "ICI Fund II" ,Sector : "Deep Tech"},{FundName: "Capital Midwest IV" ,Sector : "Enterprise"},{FundName: "Geek Ventures Fund I" ,Sector : "Agnostic"},{FundName: "Linchpin Health Ventures Fund I" ,Sector : "Life Sciences"},{FundName: "SNØCAP" ,Sector : "Impact"},{FundName: "Unshackled Fund III" ,Sector : "Agnostic"},{FundName: "Progression Fund II" ,Sector : "Web3"},{FundName: "7G BioVentures Fund I" ,Sector : "Life Sciences"},{FundName: "Nomadic VP Fund I LP" ,Sector : "Impact"},{FundName: "Grayscale Ventures Fund III" ,Sector : "Enterprise"},{FundName: "Supply Change Capital Fund I" ,Sector : "Agnostic"},{FundName: "Fortius Ventures I" ,Sector : "Agnostic"},{FundName: "Coalition Fund I" ,Sector : "Deep Tech"},{FundName: "AmplifyLA Fund V" ,Sector : "Enterprise"},{FundName: "Climate Capital Bio Fund I" ,Sector : "Life Sciences"},{FundName: "91 Ventures" ,Sector : "Deep Tech"},{FundName: "Palumni VC" ,Sector : "Agnostic"},{FundName: "Brex Technology Opportunities Fund I" ,Sector : "Enterprise"},{FundName: "Overture Climate Fund I" ,Sector : "Impact"},{FundName: "Funnder VC Fund I" ,Sector : "FinTech"},{FundName: "VITALIZE VC Fund II" ,Sector : "Enterprise"},{FundName: "Atman Capital Fund I" ,Sector : "Enterprise"},{FundName: "Mission One Capital Fund I" ,Sector : "Impact"}];
+
 
 
