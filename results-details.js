@@ -27,7 +27,7 @@ var page_number = 1;
 requestAnimationFrame(function() {
     // your code here
 
-    var selection_indexes = window.location.href.split("?")[1];
+    var selection_indexes = Array.from(window.location.href.split("?")[1]);
     console.log(selection_indexes);
     checkNumbers(selection_indexes);
 
