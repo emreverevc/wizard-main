@@ -43,6 +43,8 @@ var fund_attributes_selections = [];
 
 var fund_attributes_rank = 0;
 
+var selection_array = [0,[0],0,[0,0]];
+
 function get_started() {
 
   document.querySelector('.welcome-screen').remove();
@@ -241,7 +243,8 @@ function next_page() {
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
           if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
-            stage_selections.push(document.querySelectorAll('.selection-item')[item].id);
+            var selection_index = document.querySelectorAll('.selection-item')[item].id.substring(document.querySelectorAll('.selection-item')[item].id.lastIndexOf('-'));
+            stage_selections.push(selection_index);
           }
         } catch {}
       }
@@ -249,6 +252,7 @@ function next_page() {
       document.getElementById("sector-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("gold-bar").style.width = "320";
 
+      console.log(stage_selections);
       
       setTimeout(function() {
         document.getElementById("question-content").innerHTML = "";
