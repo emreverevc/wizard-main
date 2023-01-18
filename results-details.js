@@ -174,11 +174,13 @@ function findSimilarItems(newEntry, dataset) {
     return dictionary[keys[index]].Sector;
   }
 
-  function checkNumbers(arr) {
-    arr.forEach((value, index) => {
-      if (typeof value !== 'number') {
-          throw new Error(`Value at index ${index} is not a number.`);
-      }
+  function checkNumbers(arrays) {
+    arrays.forEach((array, arrayIndex) => {
+      array.forEach((value, valueIndex) => {
+        if (typeof value !== 'number') {
+            throw new Error(`Value at index [${arrayIndex}, ${valueIndex}] is not a number.`);
+        }
+      });
     });
   }
   
