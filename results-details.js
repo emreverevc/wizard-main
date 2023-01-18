@@ -28,6 +28,7 @@ requestAnimationFrame(function() {
     // your code here
 
     var selection_indexes = window.location.href.split("?")[1];
+    console.log(selection_indexes);
     checkNumbers(selection_indexes);
 
     $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
