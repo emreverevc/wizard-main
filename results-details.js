@@ -124,15 +124,6 @@ function expand_row(element) {
     }
 }
 
-function checkIntegers(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (!Number.isInteger(arr[i])) {
-            throw new Error(`Value at index ${i} is not an integer.`);
-        }
-    }
-}
-
-
 function findSimilarItems(newEntry, dataset) {
 
     let similarityScores = [];
@@ -183,10 +174,11 @@ function findSimilarItems(newEntry, dataset) {
     return dictionary[keys[index]].Sector;
   }
 
-function checkNumbers(arr) {
-    for (let i = 0; i < arr.length; i++) {
-        if (!Number.isInteger(arr[i]) || !Number.isDecimal(arr[i])) {
-            throw new Error(`Value at index ${i} is not an integer.`);
-        }
-    }
-}
+  function checkNumbers(arr) {
+    arr.forEach((value, index) => {
+      if (typeof value !== 'number') {
+          throw new Error(`Value at index ${index} is not a number.`);
+      }
+    });
+  }
+  
