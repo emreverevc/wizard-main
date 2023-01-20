@@ -139,7 +139,7 @@ function generatedFundsList(selection_array) {
     
     for (i = 0; i < funds_index_list.length; i++) {
         var fund_info = getDictionaryEntry(funds_array, funds_index_list[i]);
-        var heatmap_svg = generate_heatmap(fund_info);
+        var heatmap_svg = generate_heatmap();
         var whole_fund_container = document.createElement('div');
         whole_fund_container.className = "whole-fund-container";
         whole_fund_container.innerHTML = `<div class="fund-whole-row">
@@ -280,6 +280,7 @@ function findSimilarItems(newEntry, dataset) {
 
 //   ugh
 function generate_heatmap(fund_info) {
+    console.log("hello");
     var heatmap_svg = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" zoomAndPan="magnify" viewBox="0 0 187.5 187.499992" height="250" preserveAspectRatio="xMidYMid meet" version="1.0">
                 <defs>
                     <g />
