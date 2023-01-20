@@ -139,7 +139,7 @@ function generatedFundsList(selection_array) {
     
     for (i = 0; i < funds_index_list.length; i++) {
         var fund_info = getDictionaryEntry(funds_array, funds_index_list[i]);
-        var heatmap_svg = generate_heatmap();
+        var heatmap_svg = generate_heatmap(fund_info);
         var whole_fund_container = document.createElement('div');
         whole_fund_container.className = "whole-fund-container";
         whole_fund_container.innerHTML = `<div class="fund-whole-row">
