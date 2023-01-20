@@ -164,18 +164,18 @@ function generatedFundsList(selection_array) {
                                         <div class="fund-whole-row">
                                             <div class="fund-more-info-container">
                                             <div class="pill-row">
-                                                <div class="location">Location:&emsp;<span class="pill">Washington, DC</span></div>
+                                                <div class="location">Location:&emsp;<span class="pill">${fund_info.location}</span></div>
                                                 <div class="Stages">Stages:&emsp;
-                                                <span class="pill">Pre-Seed</span>&emsp;
+                                                <span class="pill">${fund_info.Stage}</span>&emsp;
                                                 </div>
                                                 <div class="Sector">Sector:&emsp;<span class="pill">${fund_info.Sector}</span></div>
                                             </div>
                                             <div class="pill-row">
                                                 <div class="keywords">
                                                 Keywords:&emsp;
-                                                <span class="pill">BioTech</span>&emsp;
-                                                <span class="pill">ClimateTech</span>&emsp;
-                                                <span class="pill">Sustainability</span>&emsp;
+                                                <span class="pill">${fund_info.industry_1}</span>&emsp;
+                                                <span class="pill">${fund_info.industry_2}</span>&emsp;
+                                                <span class="pill">${fund_info.industry_3}</span>&emsp;
                                                 </div>
                                             </div>
                                             <div class="rating-info-row">
@@ -187,8 +187,8 @@ function generatedFundsList(selection_array) {
                                                         Top Attributes
                                                     </div>
                                                     <div class="attributes-card">
-                                                        <div class="attribute-name">Community</div>
-                                                        <div class="attribute-text">&bull; Climate Capital is a community of 40+ leading and emerging climate investors &bull; The firm also has 2,200+ LPs across the Climate Capital Collective syndicate who are empowered as scouts and help fulfill founder requests.</div>
+                                                        <div class="attribute-name">${fund_info.TopAttributeOneTitle}</div>
+                                                        <div class="attribute-text">${fund_info.TopAttributeOne}</div>
                                                     </div>
                                                     <div class="attributes-toggle">
                                                     <svg width="101" height="30" viewBox="0 0 101 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +204,7 @@ function generatedFundsList(selection_array) {
                                                 </div>
                                             </div>
                                             <div class="fund-whole-row">
-                                                <div class="full-report" onclick="window.open('https://ratings.reverevc.com/view/672687553/', '_blank');">
+                                                <div class="full-report" onclick="window.open('${fund_info.reportlink}', '_blank');">
                                                     Read the full Report
                                                 </div>
                                             </div>
