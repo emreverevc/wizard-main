@@ -76,6 +76,9 @@ function next_page() {
         case 3:
             document.getElementById('results-container').innerHTML="";
             $(".results-container").load("https://emreverevc.github.io/wizard-main/results-funds.html");
+            setTimeout(function() {
+                generatedFundsList(selection_indexes)
+              }, 250); 
         break;
     }
 }
