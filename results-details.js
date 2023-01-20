@@ -723,16 +723,16 @@ function generate_heatmap(fund_info) {
                     <path fill="${fund_info.Rating_TrackRecord_Allocations_Color}" d="M 151.59375 107.636719 L 180.96875 107.636719 L 180.96875 137.011719 L 151.59375 137.011719 Z M 151.59375 107.636719 " fill-opacity="1" fill-rule="nonzero" />
                 </g>
                 <g clip-path="url(#039eb87dc2)">
-                    <path fill="#${fund_info.Rating_Firm_Workflow_Color}" d="M 66.382812 135.863281 L 95.761719 135.863281 L 95.761719 165.238281 L 66.382812 165.238281 Z M 66.382812 135.863281 " fill-opacity="1" fill-rule="nonzero" />
+                    <path fill="${fund_info.Rating_Firm_Workflow_Color}" d="M 66.382812 135.863281 L 95.761719 135.863281 L 95.761719 165.238281 L 66.382812 165.238281 Z M 66.382812 135.863281 " fill-opacity="1" fill-rule="nonzero" />
                 </g>
                 <g clip-path="url(#5f882745c3)">
                     <path fill="${fund_info.Rating_Firm_LPCommunications_Color}" d="M 94.882812 135.863281 L 124.261719 135.863281 L 124.261719 165.238281 L 94.882812 165.238281 Z M 94.882812 135.863281 " fill-opacity="1" fill-rule="nonzero" />
                 </g>
                 <g clip-path="url(#afee98528c)">
-                    <path fill="#${fund_info.Rating_Firm_Branding_Color}" d="M 122.976562 135.863281 L 152.351562 135.863281 L 152.351562 165.238281 L 122.976562 165.238281 Z M 122.976562 135.863281 " fill-opacity="1" fill-rule="nonzero" />
+                    <path fill="${fund_info.Rating_Firm_Branding_Color}" d="M 122.976562 135.863281 L 152.351562 135.863281 L 152.351562 165.238281 L 122.976562 165.238281 Z M 122.976562 135.863281 " fill-opacity="1" fill-rule="nonzero" />
                 </g>
                 <g clip-path="url(#6f763ee56e)">
-                    <path fill="#${fund_info.Rating_Firm_ServiceProvider_Color}" d="M 151.59375 135.863281 L 180.96875 135.863281 L 180.96875 165.238281 L 151.59375 165.238281 Z M 151.59375 135.863281 " fill-opacity="1" fill-rule="nonzero" />
+                    <path fill="${fund_info.Rating_Firm_ServiceProvider_Color}" d="M 151.59375 135.863281 L 180.96875 135.863281 L 180.96875 165.238281 L 151.59375 165.238281 Z M 151.59375 135.863281 " fill-opacity="1" fill-rule="nonzero" />
                 </g>
                 <g fill="#ffffff" fill-opacity="1">
                     <g transform="translate(67.862526, 28.199704)">
