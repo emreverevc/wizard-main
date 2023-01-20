@@ -145,7 +145,7 @@ function generatedFundsList(selection_array) {
         whole_fund_container.innerHTML = `<div class="fund-whole-row">
                                             <div class="fund-row" onclick="expand_row(this)">
                                             <div class="fund-logo-container">
-                                                <div class="fund-logo" style="background: url(https://images.squarespace-cdn.com/content/v1/62b5eda255f9940094bf5de2/b3c81f34-7419-479a-ac53-5b89c18d5571/No+background.png); background-size: cover;"></div>
+                                                <div class="fund-logo" style="background: url(${fund_info.Logo}); background-size: cover;"></div>
                                             </div>
                                             <div class="fund-name">${fund_info.FundName}</div>
                                             <div class="expand-collapse">
