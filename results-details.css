@@ -410,6 +410,26 @@
     border-radius: 20px;
     padding: 5px 20px 5px 20px;
   }
+
+  .location {
+    display: flex;
+    align-items: center;
+  }
+
+  .Sector {
+    display: flex;
+    align-items: center;
+  }
+
+  .Stages{
+    display: flex;
+    align-items: center;
+  }
+
+  .keywords {
+    display: flex;
+    align-items: center;
+  }
   
   .rating-info-row {
     margin-top: 25px;
