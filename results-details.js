@@ -675,7 +675,7 @@ function generate_heatmap(fund_info) {
                     </g>
                 </g>
                 <g clip-path="url(#9072db4d9f)">
-                    <path fill="${fund_info.Rating_Sourcing_Channels_Color}}" d="M 66.382812 22.660156 L 95.761719 22.660156 L 95.761719 52.039062 L 66.382812 52.039062 Z M 66.382812 22.660156 " fill-opacity="1" fill-rule="nonzero" />
+                    <path fill="${fund_info.Rating_Sourcing_Channels_Color}" d="M 66.382812 22.660156 L 95.761719 22.660156 L 95.761719 52.039062 L 66.382812 52.039062 Z M 66.382812 22.660156 " fill-opacity="1" fill-rule="nonzero" />
                 </g>
                 <g clip-path="url(#8de3f6cbc7)">
                     <path fill="${fund_info.Rating_Sourcing_Funnel_Color}" d="M 94.882812 22.660156 L 124.261719 22.660156 L 124.261719 52.039062 L 94.882812 52.039062 Z M 94.882812 22.660156 " fill-opacity="1" fill-rule="nonzero" />
