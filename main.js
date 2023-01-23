@@ -239,8 +239,10 @@ function next_page() {
         big_circle.setAttribute('style', 'transform: none;');
         document.querySelector('#next-button').style.visibility = "visible";
         document.querySelector('.progress-bar').style.visibility = "visible";
-        page_loaded = true;
       }, 1100); 
+      setTimeout(function() {
+        page_loaded = true;
+      }, 1000); 
       break;
     case 2:
 
@@ -272,9 +274,10 @@ function next_page() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
-        page_loaded = true;
       }, 1100); 
-
+      setTimeout(function() {
+        page_loaded = true;
+      }, 1000);
       break;
     case 3:
 
@@ -305,8 +308,10 @@ function next_page() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
-        page_loaded = true;
       }, 1100); 
+      setTimeout(function() {
+        page_loaded = true;
+      }, 1000); 
 
       break;
     case 4:
@@ -337,8 +342,10 @@ function next_page() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
-        page_loaded = true;
       }, 1100); 
+      setTimeout(function() {
+        page_loaded = true;
+      }, 1000); 
       break;
     case 5:
 
