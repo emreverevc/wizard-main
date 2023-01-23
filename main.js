@@ -390,6 +390,11 @@ function previous_page() {
     case 0:
       break;
     case 1:
+      document.getElementById('jp-widget').remove();
+      document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
+      // document.getElementById('jp-widget-inline').remove();
+      document.getElementById('jp-widget-lightbox').remove();
+
       document.querySelector('#previous-button').style.visibility = "hidden";
       document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("sector-progress-bar").style.fill = "#D9D9D9";
@@ -402,6 +407,11 @@ function previous_page() {
       break;
     case 2:
 
+      document.getElementById('jp-widget').remove();
+      document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
+      // document.getElementById('jp-widget-inline').remove();
+      document.getElementById('jp-widget-lightbox').remove();
+
       document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("sector-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("risk-return-progress-bar").style.fill = "#D9D9D9";
@@ -413,6 +423,11 @@ function previous_page() {
       break;
       
     case 3:
+
+      document.getElementById('jp-widget').remove();
+      document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
+      // document.getElementById('jp-widget-inline').remove();
+      document.getElementById('jp-widget-lightbox').remove();
 
       document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("sector-progress-bar").style.fill = "#E1BD7D";

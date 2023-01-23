@@ -2059,11 +2059,12 @@ function generate_risk_gauge(risk_index) {
     document.getElementById('risk-assessment-graphic').innerHTML = risk_gauge;
 }
 
-function generate_sector_bubbles(sector_indexes){
+function generate_sector_bubbles(sector_indexes) {
     var market_list = [];
     var market_details_list = [];
     var sector_bubbles = "";
-    let market_sizes = [{MarketName : "Consumer", MarketSize: "$11T", Rank: 1},
+    let market_sizes = [{MarketName: "", MarketSize: "", Rank: 0},
+                        {MarketName : "Consumer", MarketSize: "$11T", Rank: 1},
                         {MarketName : "Enterprise", MarketSize: "$237B", Rank: 3},
                         {MarketName : "Deep Tech", MarketSize: "$80B", Rank: 6},
                         {MarketName : "FinTech", MarketSize: "$150B", Rank: 4},
@@ -2080,8 +2081,11 @@ function generate_sector_bubbles(sector_indexes){
         return a - b;
     });
 
-    for (i = 0 ; market_list.length && i < 3 ; i++) {
-        market_details_list.push(market_list.filter(obj => obj.rank === market_list[i]));
+    for (i = 0 ; i < market_list.length; i++) {
+        if (i >=3) {
+            break;
+        }
+        market_details_list.push(market_sizes.filter(obj => obj.Rank === market_list[i])[0]);
     }
 
     switch (market_details_list.length) {
