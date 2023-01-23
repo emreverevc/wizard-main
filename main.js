@@ -35,6 +35,7 @@ requestAnimationFrame(function() {
   
 });
 
+
 var page_number = 0;
 var stage_selections = [];
 var sector_selections = [];
@@ -207,7 +208,8 @@ function next_page() {
 
   } else {
 
-  if (document.getElementsByClassName('active').length == 0 && !started_blah) {
+  if (document.getElementsByClassName('active').length == 0 && started_blah) {
+    console.log("hi");
     var shakeElement = document.getElementsByClassName('column middle')[0];
     shakeScreen(shakeElement);
   } else {
@@ -723,7 +725,7 @@ function findSimilarItems(newEntry, dataset) {
   return top_five_array;
 }
 
-let fund_characteristics_indexes = [[1,3,2,[10,10]],[1,1,2,[5,2]],[3,8,1,[3,5]],[3,2,1,[2,3]],[1,2,3,[4,2]],[1,4,3,[3,4]],[2,3,1,[1,3]],[1,7,3,[10,10]],[2,6,2,[2,4]],[2,1,2,[3,4]],[1,6,2,[3,3]],[1,2,1,[1,3]],[1,2,3,[10,10]],[2,5,3,[1,1]],[1,3,1,[5,4]],[1,2,3,[4,2]],[2,3,3,[2,2]],[1,4,3,[2,2]],[1,1,1,[3,4]],[1,2,3,[3,3]],[1,3,3,[3,4]],[1,8,2,[4,2]],[1,4,2,[3,2]],[1,3,3,[10,10]],[2,4,2,[2,2]],[2,3,3,[1,1]],[1,3,3,[5,2]],[1,5,1,[2,2]],[1,2,2,[2,3]],[1,1,2,[2,3]],[2,5,2,[5,3]],[1,1,2,[3,4]],[1,3,3,[4,2]],[1,3,3,[1,2]],[3,2,2,[2,5]],[1,8,3,[10,10]],[1,6,3,[10,10]],[2,5,3,[1,2]],[1,8,2,[2,2]],[1,7,2,[5,1]],[3,6,3,[1,2]],[1,5,3,[10,10]],[2,2,2,[2,1]],[1,8,3,[10,10]],[2,8,2,[2,5]],[1,3,3,[10,10]],[1,2,1,[4,3]],[1,6,3,[10,10]],[1,3,3,[10,10]],[1,8,3,[10,10]],[2,2,1,[1,2]],[2,5,3,[1,3]],[1,4,3,[10,10]],[1,2,2,[2,1]],[1,2,3,[10,10]],[1,5,3,[10,10]]];
+
 
 
 function getDictionaryEntry(dictionary, index) {
