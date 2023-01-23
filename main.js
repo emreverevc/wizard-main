@@ -205,6 +205,11 @@ function next_page() {
   if (!page_loaded) {
 
   } else {
+
+  if (document.getElementsByClassName('active').length == 0) {
+    var shakeElement = document.getElementsByClassName('column middle')[0];
+    shakeScreen(shakeElement);
+  } else {
   
   page_number++;
   page_loaded = false;
@@ -394,6 +399,8 @@ function next_page() {
   console.log(sector_selections);
   console.log(risk_return_selections);
   console.log(fund_attributes_selections);
+
+}
 
 }
   
@@ -729,6 +736,13 @@ console.log(findSimilarItems(newEntry, dataset));
 
 function firstElements(arrays) {
     return arrays.map(array => array[0]);
+}
+
+function shakeScreen(shakeElement) {
+  shakeElement.classList.add("shake-animation");
+  shakeElement.addEventListener("animationend", function() {
+      shakeElement.classList.remove("shake-animation");
+  });
 }
 
 
