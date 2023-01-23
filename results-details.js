@@ -2114,37 +2114,37 @@ function generate_category_analysis(category_indexes) {
         document.getElementById('top-category-title').textContent = "Revere Category:";
         document.getElementById('top-category-text').textContent = "Please select additional cateogry preferences to see break down";
     }
-    
+
     try {
         switch (top_categories[1]) {
             case 1:
-                document.getElementById('top-category-title').textContent = "Revere Category: Team"
-                document.getElementById('top-category-text').textContent = "Only funds where the composite Team score is a positive attribute or best-in-class.<br><br>Team categories include operating experience, investment experience, decision-making process, and team bench strength."
+                document.getElementById('second-category-title').textContent = "Revere Category: Team"
+                document.getElementById('second-category-text').textContent = "Only funds where the composite Team score is a positive attribute or best-in-class.<br><br>Team categories include operating experience, investment experience, decision-making process, and team bench strength."
                 break
             case 2:
-                document.getElementById('top-category-title').textContent = "Revere Category: Value-Add"
-                document.getElementById('top-category-text').textContent = "Only funds where the composite Value Add score is a positive attribute or best-in-class.<br><br>Value Add categories include fundraising guidance, revenue generation, growth lever initiatives, and community building."
+                document.getElementById('second-category-title').textContent = "Revere Category: Value-Add"
+                document.getElementById('second-category-text').textContent = "Only funds where the composite Value Add score is a positive attribute or best-in-class.<br><br>Value Add categories include fundraising guidance, revenue generation, growth lever initiatives, and community building."
                 break
             case 3:
-                document.getElementById('top-category-title').textContent = "Revere Category: Sourcing"
-                document.getElementById('top-category-text').textContent = "Only funds where the composite Sourcing score is a positive attribute or best-in-class.<br><br>Sourcing categories include sourcing channels, funneling process, winning deals, and signal to other investors."
+                document.getElementById('second-category-title').textContent = "Revere Category: Sourcing"
+                document.getElementById('second-category-text').textContent = "Only funds where the composite Sourcing score is a positive attribute or best-in-class.<br><br>Sourcing categories include sourcing channels, funneling process, winning deals, and signal to other investors."
                 break
             case 4:
-                document.getElementById('top-category-title').textContent = "Revere Category: Track Record"
-                document.getElementById('top-category-text').textContent = "Only funds where the composite Track Record score is a positive attribute or best-in-class.<br><br>Track Record categories include historical data, tier-1 co-investors, number of outliers, and follow-on capital metrics."
+                document.getElementById('second-category-title').textContent = "Revere Category: Track Record"
+                document.getElementById('second-category-text').textContent = "Only funds where the composite Track Record score is a positive attribute or best-in-class.<br><br>Track Record categories include historical data, tier-1 co-investors, number of outliers, and follow-on capital metrics."
                 break
             case 5:
-                document.getElementById('top-category-title').textContent = "Revere Category: Firm Management"
-                document.getElementById('top-category-text').textContent = "Only funds where the composite Firm Management score is a positive attribute or best-in-class.<br><br>Firm Management categories include portfolio management, LP alignment, firm branding, and LP co-investment programs."
+                document.getElementById('second-category-title').textContent = "Revere Category: Firm Management"
+                document.getElementById('second-category-text').textContent = "Only funds where the composite Firm Management score is a positive attribute or best-in-class.<br><br>Firm Management categories include portfolio management, LP alignment, firm branding, and LP co-investment programs."
                 break
             default:
-                document.getElementById('top-category-title').textContent = "Revere Category:";
-                document.getElementById('top-category-text').textContent = "Please select additional cateogry preferences to see break down";
+                document.getElementById('second-category-title').textContent = "Revere Category:";
+                document.getElementById('second-category-text').textContent = "Please select additional cateogry preferences to see break down";
                 break
         }
     } catch {
-        document.getElementById('top-category-title').textContent = "Revere Category:";
-        document.getElementById('top-category-text').textContent = "Please select additional cateogry preferences to see break down";
+        document.getElementById('second-category-title').textContent = "Revere Category:";
+        document.getElementById('second-category-text').textContent = "Please select additional cateogry preferences to see break down";
     }
 
 }
