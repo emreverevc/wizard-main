@@ -33,8 +33,9 @@ requestAnimationFrame(function() {
     checkNumbers(selection_indexes);
 
     $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
-    generate_overview_box(selection_indexes[2]);
     document.querySelector(".results-container").style.opacity = '1';
+    generate_overview_box(selection_indexes[2]);
+    
     
 
 // Add a click event listener to the expandable div
