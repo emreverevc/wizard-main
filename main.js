@@ -45,7 +45,7 @@ var fund_attributes_rank = 0;
 
 var selection_array = [0,[0],0,[0,0]];
 
-var page_loaded = false;
+var page_loaded = true;
 
 function get_started() {
 
@@ -390,7 +390,7 @@ function next_page() {
   console.log(sector_selections);
   console.log(risk_return_selections);
   console.log(fund_attributes_selections);
-  
+
 }
   
 }
