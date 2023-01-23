@@ -46,6 +46,7 @@ var fund_attributes_rank = 0;
 var selection_array = [0,[0],0,[0,0]];
 
 var page_loaded = true;
+var started_blah = false;
 
 function get_started() {
 
@@ -206,11 +207,11 @@ function next_page() {
 
   } else {
 
-  if (document.getElementsByClassName('active').length == 0) {
+  if (document.getElementsByClassName('active').length == 0 && !started_blah) {
     var shakeElement = document.getElementsByClassName('column middle')[0];
     shakeScreen(shakeElement);
   } else {
-  
+  started_blah = true;
   page_number++;
   page_loaded = false;
   
