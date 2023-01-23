@@ -34,10 +34,8 @@ requestAnimationFrame(function() {
 
     $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
     document.querySelector(".results-container").style.opacity = '1';
-    setTimeout(function() {
-        generate_overview_box(selection_indexes[2]);
-      }, 250); 
     
+    generate_overview_box(selection_indexes[2]);
     
     
 
