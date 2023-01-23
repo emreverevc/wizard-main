@@ -45,6 +45,8 @@ var fund_attributes_rank = 0;
 
 var selection_array = [0,[0],0,[0,0]];
 
+var page_loaded = false;
+
 function get_started() {
 
   document.querySelector('.welcome-screen').remove();
@@ -200,8 +202,12 @@ function collapse_more_info() {
 }
 
 function next_page() {
+  if (!page_loaded) {
+
+  } else {
   
   page_number++;
+  page_loaded = false;
   
   document.getElementById("question-content").setAttribute('style', 'transform: scale(.5); opacity: 0;')
   
@@ -233,6 +239,7 @@ function next_page() {
         big_circle.setAttribute('style', 'transform: none;');
         document.querySelector('#next-button').style.visibility = "visible";
         document.querySelector('.progress-bar').style.visibility = "visible";
+        page_loaded = true;
       }, 1100); 
       break;
     case 2:
@@ -265,6 +272,7 @@ function next_page() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
+        page_loaded = true;
       }, 1100); 
 
       break;
@@ -297,6 +305,7 @@ function next_page() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
+        page_loaded = true;
       }, 1100); 
 
       break;
@@ -328,6 +337,7 @@ function next_page() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
+        page_loaded = true;
       }, 1100); 
       break;
     case 5:
@@ -374,11 +384,14 @@ function next_page() {
 
       break;
   }
+  
 
   console.log(stage_selections);
   console.log(sector_selections);
   console.log(risk_return_selections);
   console.log(fund_attributes_selections);
+  
+}
   
 }
 
