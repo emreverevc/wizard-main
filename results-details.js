@@ -188,7 +188,7 @@ function generatedFundsList(selection_array) {
                                                 </div>
                                                 <div class="attributes-container">                                   
                                                     <div class="attributes-title">
-                                                        Top Attributes
+                                                        Top Attribute
                                                     </div>
                                                     <div class="attributes-card">
                                                         <div class="attribute-name">${fund_info.TopAttributeOneTitle}</div>
@@ -196,13 +196,13 @@ function generatedFundsList(selection_array) {
                                                     </div>
                                                     <div class="attributes-toggle">
                                                     <svg width="101" height="30" viewBox="0 0 101 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <circle cx="87.5" cy="15" r="10.5" fill="#182C50"/>
+                                                    <!-- <circle cx="87.5" cy="15" r="10.5" fill="#182C50"/>
                                                         <path d="M94.0799 15.7806C94.4704 15.3901 94.4704 14.7569 94.0799 14.3664L87.7159 8.00242C87.3254 7.61189 86.6923 7.61189 86.3017 8.00242C85.9112 8.39294 85.9112 9.02611 86.3017 9.41663L91.9586 15.0735L86.3017 20.7303C85.9112 21.1209 85.9112 21.754 86.3017 22.1446C86.6923 22.5351 87.3254 22.5351 87.7159 22.1446L94.0799 15.7806ZM81.1853 16.0735H93.3728V14.0735H81.1853V16.0735Z" fill="white"/>
                                                         <circle cx="13.5" cy="15" r="10.5" fill="#182C50"/>
                                                         <path d="M6.4782 15.7805C6.08767 15.3899 6.08767 14.7568 6.4782 14.3663L12.8422 8.0023C13.2327 7.61177 13.8658 7.61177 14.2564 8.0023C14.6469 8.39282 14.6469 9.02599 14.2564 9.41651L8.59952 15.0734L14.2564 20.7302C14.6469 21.1207 14.6469 21.7539 14.2564 22.1444C13.8658 22.535 13.2327 22.535 12.8422 22.1444L6.4782 15.7805ZM19.3728 16.0734H7.1853V14.0734H19.3728V16.0734Z" fill="white"/>
                                                         <circle cx="64.8043" cy="15.4613" r="4.46133" fill="#182C50" fill-opacity="0.48"/>
                                                         <circle cx="50.633" cy="15.4613" r="4.46133" fill="#919AAB"/>
-                                                        <circle cx="36.4613" cy="15.4613" r="4.46133" fill="#182C50"/>
+                                                        <circle cx="36.4613" cy="15.4613" r="4.46133" fill="#182C50"/> -->
                                                     </svg>                                                    
                                                     </div>
                                                 </div>
