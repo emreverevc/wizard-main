@@ -386,9 +386,6 @@ function next_page() {
       setTimeout(function() {
         window.location.replace("https://explorevc.webflow.io/wizard/results/?" + JSON.stringify(selection_array));
       }, 1250)
-
-      
-
       break;
   }
   
