@@ -51,10 +51,10 @@ function get_started() {
 
   document.querySelector('.welcome-screen').remove();
 
-  document.getElementById('jp-widget').remove();
-  document.getElementById('SYRQumJ8et293MJtgc8WNC').remove();
-  // document.getElementById('jp-widget-inline').remove();
-  document.getElementById('jp-widget-lightbox').remove();
+  // document.getElementById('jp-widget').remove();
+  // document.getElementById('SYRQumJ8et293MJtgc8WNC').remove();
+  // // document.getElementById('jp-widget-inline').remove();
+  // document.getElementById('jp-widget-lightbox').remove();
 
   next_page();
 }
@@ -246,10 +246,10 @@ function next_page() {
       break;
     case 2:
 
-    document.getElementById('jp-widget').remove();
-    document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
-    // document.getElementById('jp-widget-inline').remove();
-    document.getElementById('jp-widget-lightbox').remove();
+    // document.getElementById('jp-widget').remove();
+    // document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
+    // // document.getElementById('jp-widget-inline').remove();
+    // document.getElementById('jp-widget-lightbox').remove();
 
       document.querySelector('#previous-button').style.visibility = "visible";
       for (var item in document.querySelectorAll('.selection-item')) {
@@ -281,10 +281,10 @@ function next_page() {
       break;
     case 3:
 
-      document.getElementById('jp-widget').remove();
-      document.getElementById('SlOTrlG4knA4TDahEjmToX').remove();
-      // document.getElementById('jp-widget-inline').remove();
-      document.getElementById('jp-widget-lightbox').remove();
+      // document.getElementById('jp-widget').remove();
+      // document.getElementById('SlOTrlG4knA4TDahEjmToX').remove();
+      // // document.getElementById('jp-widget-inline').remove();
+      // document.getElementById('jp-widget-lightbox').remove();
         
       
       for (var item in document.querySelectorAll('.selection-item')) {
@@ -316,10 +316,10 @@ function next_page() {
       break;
     case 4:
 
-      document.getElementById('jp-widget').remove();
-      document.getElementById('EfePM3IQmE7aHMhvu8rZuh').remove();
-      // document.getElementById('jp-widget-inline').remove();
-      document.getElementById('jp-widget-lightbox').remove();
+      // document.getElementById('jp-widget').remove();
+      // document.getElementById('EfePM3IQmE7aHMhvu8rZuh').remove();
+      // // document.getElementById('jp-widget-inline').remove();
+      // document.getElementById('jp-widget-lightbox').remove();
 
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
@@ -349,10 +349,10 @@ function next_page() {
       break;
     case 5:
 
-      document.getElementById('jp-widget').remove();
-      document.getElementById('AVQLMNutoYXIm9od0ranMu').remove();
-      // document.getElementById('jp-widget-inline').remove();
-      document.getElementById('jp-widget-lightbox').remove();
+      // document.getElementById('jp-widget').remove();
+      // document.getElementById('AVQLMNutoYXIm9od0ranMu').remove();
+      // // document.getElementById('jp-widget-inline').remove();
+      // document.getElementById('jp-widget-lightbox').remove();
 
       // handling this at selection level
       // for (var item in document.querySelectorAll('.selection-item')) {
@@ -410,10 +410,10 @@ function previous_page() {
     case 0:
       break;
     case 1:
-      document.getElementById('jp-widget').remove();
-      document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
-      // document.getElementById('jp-widget-inline').remove();
-      document.getElementById('jp-widget-lightbox').remove();
+      // document.getElementById('jp-widget').remove();
+      // document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
+      // // document.getElementById('jp-widget-inline').remove();
+      // document.getElementById('jp-widget-lightbox').remove();
 
       document.querySelector('#previous-button').style.visibility = "hidden";
       document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
@@ -427,10 +427,10 @@ function previous_page() {
       break;
     case 2:
 
-      document.getElementById('jp-widget').remove();
-      document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
-      // document.getElementById('jp-widget-inline').remove();
-      document.getElementById('jp-widget-lightbox').remove();
+      // document.getElementById('jp-widget').remove();
+      // document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
+      // // document.getElementById('jp-widget-inline').remove();
+      // document.getElementById('jp-widget-lightbox').remove();
 
       document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("sector-progress-bar").style.fill = "#E1BD7D";
