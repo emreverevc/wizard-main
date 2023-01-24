@@ -1,6 +1,6 @@
 @media only screen and (max-width: 790px) {
   .body-class {
-    transform: scale(.75);
+   width: 75%;
   }
 }
 
