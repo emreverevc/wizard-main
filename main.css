@@ -1,6 +1,22 @@
-@media only screen and (max-width: 790px) {
-  .body-class {
-   width: 75%;
+@media only screen and (max-width: 880px) {
+  .middle {
+   min-width: 75%!important;
+   width: 75%!important;
+  }
+
+  .selection-row {
+    grid-template-columns: repeat(auto-fill, 225px)!important;
+    row-gap: 7px;
+  }
+
+  .selection-row.sector  {
+    grid-template-columns: repeat(auto-fill, 186px)!important;
+    row-gap: 7px;
+  }
+
+  .selection-row.attributes {
+    grid-template-columns: repeat(auto-fill, 275px)!important;
+    row-gap: 7px;
   }
 }
 
