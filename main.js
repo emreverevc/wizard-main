@@ -430,8 +430,10 @@ function previous_page() {
       document.getElementById("gold-bar").style.width = "137";
 
       document.getElementById("question-content").innerHTML = "";
-      $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
-      reselectPreviousPage(stage_selections);
+      $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html", function(response, status) {
+        if(status=="success"){
+          reselectPreviousPage(stage_selections);
+        }});
       break;
     case 2:
 
@@ -447,8 +449,10 @@ function previous_page() {
       document.getElementById("gold-bar").style.width = "320";
 
       document.getElementById("question-content").innerHTML = "";
-      $("#question-content").load("https://emreverevc.github.io/wizard-main/sector-questions.html");
-      reselectPreviousPage(sector_selections);
+      $("#question-content").load("https://emreverevc.github.io/wizard-main/sector-questions.html", function(response, status) {
+        if(status=="success"){
+          reselectPreviousPage(sector_selections);
+        }});
       break;
       
     case 3:
@@ -465,8 +469,10 @@ function previous_page() {
       document.getElementById("gold-bar").style.width = "520";
 
       document.getElementById("question-content").innerHTML = "";
-      $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
-      reselectPreviousPage(risk_return_selections);
+      $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html", function(response, status) {
+        if(status=="success"){
+          reselectPreviousPage(risk_return_selections);
+        }});
       break;
     case 4:
       
