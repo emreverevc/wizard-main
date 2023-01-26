@@ -431,6 +431,7 @@ function previous_page() {
 
       document.getElementById("question-content").innerHTML = "";
       $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
+      reselectPreviousPage(stage_selections);
       break;
     case 2:
 
@@ -447,6 +448,7 @@ function previous_page() {
 
       document.getElementById("question-content").innerHTML = "";
       $("#question-content").load("https://emreverevc.github.io/wizard-main/sector-questions.html");
+      reselectPreviousPage(sector_selections);
       break;
       
     case 3:
@@ -464,6 +466,7 @@ function previous_page() {
 
       document.getElementById("question-content").innerHTML = "";
       $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
+      reselectPreviousPage(risk_return_selections);
       break;
     case 4:
       
