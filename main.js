@@ -468,10 +468,10 @@ function previous_page() {
       
     case 3:
 
-      document.getElementById('jp-widget').remove();
-      document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
-      // document.getElementById('jp-widget-inline').remove();
-      document.getElementById('jp-widget-lightbox').remove();
+      // document.getElementById('jp-widget').remove();
+      // document.getElementById('8VkmadPmAYnqWqbLtmv8Z4').remove();
+      // // document.getElementById('jp-widget-inline').remove();
+      // document.getElementById('jp-widget-lightbox').remove();
 
       document.getElementById("stage-progress-bar").style.fill = "#E1BD7D";
       document.getElementById("sector-progress-bar").style.fill = "#E1BD7D";
