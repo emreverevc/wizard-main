@@ -264,7 +264,9 @@ function next_page() {
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
           if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
-            stage_selections.push(document.querySelectorAll('.selection-item')[item].id);
+            if (!stage_selections.includes(document.querySelectorAll('.selection-item')[item].id)) {
+              stage_selections.push(document.querySelectorAll('.selection-item')[item].id);
+            }
           }
         } catch {}
       }
@@ -300,7 +302,9 @@ function next_page() {
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
           if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
-            sector_selections.push(document.querySelectorAll('.selection-item')[item].id);
+            if (!sector_selections.includes(document.querySelectorAll('.selection-item')[item].id)) {
+              sector_selections.push(document.querySelectorAll('.selection-item')[item].id);
+            }
           }
         } catch {}
       }
@@ -335,7 +339,9 @@ function next_page() {
       for (var item in document.querySelectorAll('.selection-item')) {
         try {
           if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
-            risk_return_selections.push(document.querySelectorAll('.selection-item')[item].id);
+            if (!risk_return_selections.includes(document.querySelectorAll('.selection-item')[item].id)) {
+              risk_return_selections.push(document.querySelectorAll('.selection-item')[item].id);
+            }
           }
         } catch {}
       }
