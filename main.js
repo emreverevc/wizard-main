@@ -250,6 +250,7 @@ function next_page() {
       }, 1100); 
       setTimeout(function() {
         page_loaded = true;
+        reselectPreviousPage(stage_selections);
       }, 1000); 
       break;
     case 2:
@@ -285,6 +286,7 @@ function next_page() {
       }, 1100); 
       setTimeout(function() {
         page_loaded = true;
+        reselectPreviousPage(sector_selections);
       }, 1000);
       break;
     case 3:
@@ -319,6 +321,7 @@ function next_page() {
       }, 1100); 
       setTimeout(function() {
         page_loaded = true;
+        reselectPreviousPage(risk_return_selections);
       }, 1000); 
 
       break;
@@ -362,7 +365,7 @@ function next_page() {
       // // document.getElementById('jp-widget-inline').remove();
       // document.getElementById('jp-widget-lightbox').remove();
 
-      // handling this at selection level
+      // handling this at selection level -> which means look at the selection function you full 
       // for (var item in document.querySelectorAll('.selection-item')) {
       //   try {
       //     if (document.querySelectorAll('.selection-item')[item].classList.contains('active')) {
@@ -433,7 +436,7 @@ function previous_page() {
       $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html", function(response, status) {
         if(status=="success"){
           reselectPreviousPage(stage_selections);
-          stage_selections = [];
+          // stage_selections = [];
         }});
       break;
     case 2:
@@ -453,7 +456,7 @@ function previous_page() {
       $("#question-content").load("https://emreverevc.github.io/wizard-main/sector-questions.html", function(response, status) {
         if(status=="success"){
           reselectPreviousPage(sector_selections);
-          sector_selections = [];
+          // sector_selections = [];
         }});
       break;
       
@@ -474,7 +477,7 @@ function previous_page() {
       $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html", function(response, status) {
         if(status=="success"){
           reselectPreviousPage(risk_return_selections);
-          risk_return_selections = [];
+          // risk_return_selections = [];
         }});
       break;
     case 4:
