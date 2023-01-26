@@ -471,6 +471,21 @@ function previous_page() {
   }
 }
 
+
+function reselectPreviousPage(items_array) {
+  for (var item in document.querySelectorAll('.selection-item')) {
+    for (i = 0; i < items_array.length; i++) {
+      try {
+        if (document.querySelectorAll('.selection-item')[item].id == items_array[i]) {
+          document.querySelectorAll('.selection-item')[item].classList.add('active');
+          document.querySelectorAll('.selection-item')[item].childNodes[1].style.visibility = "visible";;
+        }
+      } catch {}
+    }
+  }
+}
+
+
 function change_selection(selection) {
   var description = "";
   var svg = "";
@@ -680,6 +695,8 @@ function convertSelections(stage_selections, sector_selections, risk_return_sele
   return [stage_selections, sector_selections, risk_return_selections, fund_attributes_selections];
 
 };
+
+
 
 
 
