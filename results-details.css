@@ -14,7 +14,8 @@
     display: none;
   }
   #overview-text-box-content-text {
-    width: 90%;
+    width: 100%;
+    padding: 0px;
   }
   .analysis-box {
     display: flex!important;
