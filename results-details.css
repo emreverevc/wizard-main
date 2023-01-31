@@ -51,26 +51,26 @@
   }
   
   .next-button {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+    display: flex!important;
+    flex-direction: column!important;
+    align-content: center!important;
+    align-items: center!important;
   }
 
   .pill-row {
-    display: inline-block;
+    display: inline-block!important;
   }
   .keywords {
-    display: inline-block;
+    display: inline-block!important;
   }
   .rating-info-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr!important;
   }
   .full-report {
-    width: 75%;
+    width: 75%!important;
   }
   .fund-name {
-    font-size: 18px;
+    font-size: 18px!important;
   }
 }
 
