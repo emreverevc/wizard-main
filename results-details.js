@@ -143,11 +143,11 @@ function expand_row(element) {
         element.parentElement.nextElementSibling.firstElementChild.style.height = element.parentElement.nextElementSibling.firstElementChild.scrollHeight + "px";
         element.parentElement.nextElementSibling.firstElementChild.style.border = "1px solid black";
         element.parentElement.nextElementSibling.firstElementChild.style.borderTop = "0";
-        // element.style.borderBottom = "1px";
+        element.style.borderBottom = "1px";
     } else {
         element.lastElementChild.setAttribute('style', 'transform: none')
         element.parentElement.nextElementSibling.firstElementChild.style.height = "0";
-        element.style.borderBottom = "0";
+        // element.style.borderBottom = "0";
         // element.parentElement.nextElementSibling.firstElementChild.style.border = "0";
         // element.parentElement.nextElementSibling.firstElementChild.style.borderTop = "0";
     }
