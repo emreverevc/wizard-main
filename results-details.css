@@ -16,6 +16,9 @@
   #overview-text-box-content-text {
     width: 150%;
   }
+  .analysis-text-box {
+    width: 100%;
+  }
 }
 
 .body-class {
