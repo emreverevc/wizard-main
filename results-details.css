@@ -36,7 +36,7 @@
   .text-container-column {
     grid-area: 3 / 1 / 4 / 2!important;
     flex-direction: column!important;
-    row-gap: 5%;
+    row-gap: 5px!important;
   }
   .text-container-row {
     grid-area: 3 / 1 / 4 / 2!important;
