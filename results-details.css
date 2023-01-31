@@ -14,8 +14,9 @@
     display: none;
   }
   #overview-text-box-content-text {
-    width: 100%;
-    padding: 0px;
+    width: 120%!important;
+    padding: 0px 0px 15px 0px!important;
+    margin: 0px!important; 
   }
   .analysis-box {
     display: flex!important;
