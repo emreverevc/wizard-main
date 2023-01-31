@@ -48,6 +48,10 @@
   .navigation-box-mobile {
     display: flex!important;
     flex-direction: row-reverse!important;
+    column-gap: 5%!important;
+    width: 100%!important;
+    align-items: center!important;
+    justify-content: center!important;
   }
   
   .next-button {
