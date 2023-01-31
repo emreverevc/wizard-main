@@ -18,6 +18,10 @@
     padding: 0px 0px 15px 0px!important;
     margin: 0px!important; 
   }
+  #overview-analysis-text-box-thing {
+    margin: 0px 100px 25px 25px!important;
+
+  }
   .analysis-box {
     display: flex!important;
     flex-direction: column!important;
