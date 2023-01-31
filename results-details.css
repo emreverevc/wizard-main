@@ -78,6 +78,11 @@
   .fund-name {
     font-size: 18px!important;
   }
+  #last-analysis-box {
+    display: flex!important;
+    flex-direction: column!important;
+    align-items: center!important;
+  }
 }
 
 .body-class {
