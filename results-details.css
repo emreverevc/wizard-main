@@ -21,7 +21,8 @@
     flex-direction: column!important;
   }
   .analysis-box[style] {
-    grid-template-columns: 100%!important;
+    display: flex;
+    flex-direction: column;
   }
   .analysis-text-box {
     width: 100%;
