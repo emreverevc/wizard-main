@@ -147,6 +147,7 @@ function expand_row(element) {
     } else {
         element.lastElementChild.setAttribute('style', 'transform: none')
         element.parentElement.nextElementSibling.firstElementChild.style.height = "0";
+        element.parentElement.nextElementSibling.firstElementChild.style.border = "0px";
         // element.style.borderBottom = "0";
         // element.parentElement.nextElementSibling.firstElementChild.style.border = "0";
         // element.parentElement.nextElementSibling.firstElementChild.style.borderTop = "0";
