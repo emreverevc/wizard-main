@@ -17,8 +17,8 @@
     width: 150%;
   }
   .analysis-box {
-    grid-template-rows: 48px repeat(2, 200px);
-    grid-template-columns: 100%;
+    grid-template-rows: 48px repeat(2, 200px)!important;
+    grid-template-columns: 100%!important;
   }
   .analysis-text-box {
     width: 100%;
