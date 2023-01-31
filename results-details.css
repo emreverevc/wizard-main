@@ -17,8 +17,8 @@
     width: 150%;
   }
   .analysis-box {
-    grid-template-rows: 48px 200px 400px!important;
-    grid-template-columns: 100%!important;
+    display: flex!important;
+    flex-direction: column!important;
   }
   .analysis-box[style] {
     grid-template-columns: 100%!important;
