@@ -90,6 +90,7 @@
   }
   .fund-row {
     column-gap: 5px!important;
+    height: 80px!important;
   }
   .fund-logo-container {
     margin-left: 5px!important;
