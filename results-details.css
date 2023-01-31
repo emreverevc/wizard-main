@@ -16,9 +16,12 @@
   #overview-text-box-content-text {
     width: 150%;
   }
+  .analysis-box {
+    grid-template-rows: 48px repeat(2, 200px);
+    grid-template-columns: 100%;
+  }
   .analysis-text-box {
     width: 100%;
-    grid-template-rows: 48px repeat(2, 200px);
   }
   .analysis-title {
     grid-area: 1 / 1 / 2 / 2;
