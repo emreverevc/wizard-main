@@ -58,10 +58,12 @@
   }
 
   .pill-row {
-    display: inline-block!important;
+    display: flex;
+    flex-direction: column!important;
+    row-gap: 10px!important;
   }
   .keywords {
-    display: inline-block!important;
+    display: none!important;
   }
   .rating-info-row {
     grid-template-columns: 1fr!important;
