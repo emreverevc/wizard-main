@@ -69,6 +69,9 @@
   .full-report {
     width: 75%;
   }
+  .fund-name {
+    font-size: 18px;
+  }
 }
 
 .body-class {
