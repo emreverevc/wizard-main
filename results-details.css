@@ -56,6 +56,19 @@
     align-content: center;
     align-items: center;
   }
+
+  .pill-row {
+    display: inline-block;
+  }
+  .keywords {
+    display: inline-block;
+  }
+  .rating-info-row {
+    grid-template-columns: 1fr;
+  }
+  .full-report {
+    width: 75%;
+  }
 }
 
 .body-class {
