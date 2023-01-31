@@ -47,6 +47,15 @@
   }
   .navigation-box-mobile {
     display: block!important;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .next-button {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
   }
 }
 
