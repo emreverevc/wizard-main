@@ -64,6 +64,7 @@
   .pill-row {
     display: flex;
     flex-direction: column!important;
+    align-items: flex-start!important;
     row-gap: 10px!important;
   }
   .keywords {
