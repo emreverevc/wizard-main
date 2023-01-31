@@ -412,7 +412,6 @@
     display: grid;
     grid-template-columns: 1fr 5fr 1fr; 
     border: 1px solid black;
-    border-bottom: 0;
     height: 80px;
     align-items:center;
     cursor: pointer;
