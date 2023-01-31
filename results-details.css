@@ -1,6 +1,6 @@
 @media only screen and (max-width: 640px) {
   .left {
-    visibility: hidden;
+    display: none!important;
   }
   .middle {
     width: 90%;
