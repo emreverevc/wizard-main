@@ -3,10 +3,18 @@
     display: none!important;
   }
   .middle {
-    width: 90%;
+    width: 80%;
+    padding: 0px 0px 0px 0px!important;
+    min-width: 240px!important;
   }
   .right {
     width: 10%;
+  }
+  #overview-graphic {
+    display: none;
+  }
+  #overview-text-box-content-text {
+    width: 150%;
   }
 }
 
