@@ -46,9 +46,8 @@
     flex-direction: column;
   }
   .navigation-box-mobile {
-    display: block!important;
-    display: flex;
-    flex-direction: row-reverse;
+    display: flex!important;
+    flex-direction: row-reverse!important;
   }
   
   .next-button {
