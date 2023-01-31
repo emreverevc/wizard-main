@@ -37,11 +37,13 @@
     grid-area: 3 / 1 / 4 / 2!important;
     flex-direction: column!important;
     row-gap: 5px!important;
+    align-items: center!important;
   }
   .text-container-row {
     grid-area: 3 / 1 / 4 / 2!important;
     flex-direction: column;
     row-gap: 5%;
+    align-items: center!important;
   }
   .results-container {
     flex-direction: column;
