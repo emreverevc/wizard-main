@@ -24,13 +24,13 @@
     width: 100%;
   }
   .analysis-title {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 1 / 2 / 2!important;
   }
   .graphic-container {
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 1 / 2 / 2!important;
   }
   .text-container-column {
-    grid-area: 3 / 1 / 4 / 2;
+    grid-area: 3 / 1 / 4 / 2!important;
     flex-direction: column;
     row-gap: 5%;
   }
