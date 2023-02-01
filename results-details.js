@@ -168,7 +168,7 @@ function generatedFundsList(selection_array) {
         whole_fund_container.innerHTML = `<div class="fund-whole-row">
                                             <div class="fund-row" onclick="expand_row(this)">
                                             <div class="fund-logo-container">
-                                                <div class="fund-logo" style="background: url(${fund_info.Logo}); background-size: cover;"></div>
+                                                <div class="fund-logo" style="background: url(${fund_info.Logo}); background-size: cover; visibility:hidden;"></div>
                                             </div>
                                             <div class="fund-name">${fund_info.FundName}</div>
                                             <div class="expand-collapse">
