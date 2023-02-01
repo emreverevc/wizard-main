@@ -1,4 +1,7 @@
 @media only screen and (max-width: 640px) {
+  .body-class {
+    margin-top: -25px;
+  }
   .progress-bar {
     display: none;
   }
