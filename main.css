@@ -5,9 +5,9 @@
   .progress-bar {
     display: none;
   }
-  .background-svg {
+  /* .background-svg {
     visibility: hidden;
-  }
+  } */
   .content-area {
     display: none;
   }
