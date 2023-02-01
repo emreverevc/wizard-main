@@ -9,7 +9,7 @@
     visibility: hidden;
   }
   .content-area {
-    visibility: none;
+    display: none;
   }
 }
 
