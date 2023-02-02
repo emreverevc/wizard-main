@@ -6,7 +6,7 @@
     display: none;
   }
   .question-text {
-    margin-bottom: 25px;
+    margin-bottom: 25px!important;
   }
 
   .content-area {
