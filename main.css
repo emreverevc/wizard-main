@@ -18,6 +18,10 @@
   #mobile-background {
     display: block!important;
   }
+
+  .begin-button {
+    margin-top: 50px!important;
+  }
 }
 
 @media only screen and (max-width: 880px) {
