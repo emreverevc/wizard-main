@@ -1,13 +1,10 @@
 @media only screen and (max-width: 640px) {
   .body-class {
-    margin-top: -50px;
+    /* margin-top: -25px; */
   }
   .progress-bar {
     display: none;
   }
-  /* .background-svg {
-    visibility: hidden;
-  } */
   .content-area {
     display: none;
   }
@@ -15,7 +12,7 @@
     display: none;
   }
   #mobile-background {
-    display: block;
+    display: block!important;
   }
 }
 
