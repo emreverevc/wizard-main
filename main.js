@@ -35,6 +35,11 @@ requestAnimationFrame(function() {
     document.getElementById("small-circle-mobile").setAttribute('style', 'transform: none;');
     document.getElementById("big-circle-mobile").setAttribute('style', 'transform: none;');
   }, 500); 
+
+  document.body.addEventListener("touchmove", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }, false);
   
   
 });
