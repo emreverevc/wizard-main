@@ -5,11 +5,15 @@
   .progress-bar {
     display: none;
   }
+  .question-text {
+    margin-bottom: 25px;
+  }
+
   .content-area {
     display: none;
   }
   #desktop-background {
-    display: none;
+    display: none!important;
   }
   #mobile-background {
     display: block!important;
