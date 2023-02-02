@@ -245,11 +245,15 @@ function next_page() {
         $("#question-content").load("https://emreverevc.github.io/wizard-main/stage-questions.html");
         small_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
         big_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+        document.getElementById("big-circle-mobile").setAttribute('style', 'transform: translateX(1000px); transition: none;');
+        document.getElementById("small-circle-mobile").setAttribute('style', 'transform: translateX(1000px); transition: none;');
       }, 800); 
       setTimeout(function() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
+        document.getElementById("small-circle-mobile").setAttribute('style', 'transform: none;');
+        document.getElementById("big-circle-mobile").setAttribute('style', 'transform: none;');
         document.querySelector('#next-button').style.visibility = "visible";
         document.querySelector('.progress-bar').style.visibility = "visible";
       }, 1100); 
@@ -285,11 +289,16 @@ function next_page() {
         $("#question-content").load("https://emreverevc.github.io/wizard-main/sector-questions.html");
         small_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
         big_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+        document.getElementById("big-circle-mobile").setAttribute('style', 'transform: translateX(1000px); transition: none;');
+        document.getElementById("small-circle-mobile").setAttribute('style', 'transform: translateX(1000px); transition: none;');
+        
       }, 800); 
       setTimeout(function() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
+        document.getElementById("small-circle-mobile").setAttribute('style', 'transform: none;');
+        document.getElementById("big-circle-mobile").setAttribute('style', 'transform: none;');
       }, 1100); 
       setTimeout(function() {
         page_loaded = true;
@@ -322,11 +331,15 @@ function next_page() {
         $("#question-content").load("https://emreverevc.github.io/wizard-main/risk-return-questions.html");
         small_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
         big_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+        document.getElementById("big-circle-mobile").setAttribute('style', 'transform: translateX(1000px); transition: none;');
+        document.getElementById("small-circle-mobile").setAttribute('style', 'transform: translateX(1000px); transition: none;');
       }, 800); 
       setTimeout(function() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
+        document.getElementById("small-circle-mobile").setAttribute('style', 'transform: none;');
+        document.getElementById("big-circle-mobile").setAttribute('style', 'transform: none;');
       }, 1100); 
       setTimeout(function() {
         page_loaded = true;
@@ -359,11 +372,15 @@ function next_page() {
         $("#question-content").load("https://emreverevc.github.io/wizard-main/fund-attributes-questions.html");
         small_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
         big_circle.setAttribute('style', 'transform: translateX(2000px); transition: none;');
+        document.getElementById("big-circle-mobile").setAttribute('style', 'transform: translateX(1000px); transition: none;');
+        document.getElementById("small-circle-mobile").setAttribute('style', 'transform: translateX(1000px); transition: none;');
       }, 800); 
       setTimeout(function() {
         document.getElementById("question-content").setAttribute('style', 'transform: none; transition-delay:1000ms')
         small_circle.setAttribute('style', 'transform: none;');
         big_circle.setAttribute('style', 'transform: none;');
+        document.getElementById("small-circle-mobile").setAttribute('style', 'transform: none;');
+        document.getElementById("big-circle-mobile").setAttribute('style', 'transform: none;');
       }, 1100); 
       setTimeout(function() {
         page_loaded = true;
