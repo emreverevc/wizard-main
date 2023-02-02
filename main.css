@@ -1,6 +1,6 @@
 @media only screen and (max-width: 640px) {
   .welcome-screen {
-    margin-top: -100px;
+    margin-top: -75px!important;
   }
   .progress-bar {
     display: none;
