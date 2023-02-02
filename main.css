@@ -1,6 +1,6 @@
 @media only screen and (max-width: 640px) {
-  .body-class {
-    /* margin-top: -25px; */
+  .welcome-screen {
+    margin-top: -50px;
   }
   .progress-bar {
     display: none;
