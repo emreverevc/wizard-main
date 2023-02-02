@@ -24,16 +24,12 @@ requestAnimationFrame(function() {
 
   document.getElementById("small-circle").setAttribute('style', 'transform: translateY(-2000px); transition: none;');
   document.getElementById("big-circle").setAttribute('style', 'transform: translateY(-2500px); transition: none;');
-  document.getElementById("small-circle-mobile").setAttribute('style', 'transform: translateY(-1000px); transition: none;');
-  document.getElementById("big-circle-mobile").setAttribute('style', 'transform: translateY(-1500px); transition: none;');
   document.querySelector(".welcome-screen").setAttribute('style', 'transform: scale(.5); opacity: 0; transition: none')
 
   setTimeout(function() {
     document.querySelector(".welcome-screen").setAttribute('style', 'transform: scale(1); opacity: 1; transition: transform 750ms ease-out, opacity 500ms ease-out; transition-delay:1000ms')
     document.getElementById("small-circle").setAttribute('style', 'transform: none;');
     document.getElementById("big-circle").setAttribute('style', 'transform: none;');
-    document.getElementById("small-circle-mobile").setAttribute('style', 'transform: none;');
-    document.getElementById("big-circle-mobile").setAttribute('style', 'transform: none;');
   }, 500); 
   
   
@@ -226,10 +222,9 @@ function next_page() {
   if (page_number < 5) {
   var big_circle = document.getElementById("big-circle");
   big_circle.setAttribute('style', 'transform: translateX(-2500px); transition-delay:200ms;');
-  document.getElementById("big-circle-mobile").setAttribute('style', 'transform: translateX(-1500px); transition-delay:200ms;');
+
   var small_circle = document.getElementById("small-circle");
   small_circle.setAttribute('style', 'transform: translateX(-2500px); transition-delay: 300ms');
-  document.getElementById("small-circle-mobile").setAttribute('style', 'transform: translateX(-1500px); transition-delay:200ms;');
   
   };
   
@@ -398,15 +393,12 @@ function next_page() {
       setTimeout(function() {
         document.getElementById("small-circle").setAttribute('style', 'transform: translateY(-2000px);');
         document.getElementById("big-circle").setAttribute('style', 'transform: translateY(-2500px);');
-        document.getElementById("small-circle-mobile").setAttribute('style', 'transform: translateY(-1000px);');
-        document.getElementById("big-circle-mobile").setAttribute('style', 'transform: translateY(-1500px);');
       }, 400); 
       setTimeout(function() {
         document.querySelector('#next-button').style.visibility = "hidden";
         document.querySelector('.progress-bar').style.visibility = "hidden";
         document.querySelector('#previous-button').style.visibility = "hidden";
         document.querySelector('#background-rect').setAttribute('style', 'transform: translateY(-2500px); transition: transform 1250ms ease-out; transition-delay: 900ms');
-        document.querySelector('#background-rect-mobile').setAttribute('style', 'transform: translateY(-2500px); transition: transform 1250ms ease-out; transition-delay: 900ms');
       }, 1000); 
       setTimeout(function() {
         window.location.replace("https://explorevc.webflow.io/wizard/results/?" + JSON.stringify(selection_array));
