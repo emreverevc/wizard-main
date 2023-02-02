@@ -50,6 +50,14 @@
   transition: transform 1.2s ease-out;
 }
 
+#big-circle-mobile {
+  transition: transform 1.25s ease-out;
+}
+
+#small-circle-mobile {
+  transition: transform 1.2s ease-out;
+}
+
 #question-content {
   transition: transform 500ms ease-out, opacity 500ms ease-out;
   min-height: 674px;
