@@ -46,7 +46,7 @@ requestAnimationFrame(function() {
 document.addEventListener("click", function(event) {
     if (event.target.classList.contains('left') || event.target.classList.contains('parameters-container') || event.target.classList.contains('parameters-content') 
     || event.target.classList.contains('parameters-title')) {
-        document.getElementsByClassName('parameters-title')[0].classList.add("underlined");
+        document.getElementsByClassName('parameters-title-box')[0].classList.add("underlined");
         document.getElementsByClassName('parameters-options')[0].classList.add("show");
         document.getElementById('parameters-container').classList.add("expanded");
         document.getElementById('expand-parameters').style.visibility = "hidden";
