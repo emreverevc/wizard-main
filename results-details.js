@@ -43,9 +43,9 @@ requestAnimationFrame(function() {
     parameters_array = window.location.href.split("?")[1].split("&")[1];
     parameters_array = stringToList(parameters_array);
 
-    highlight_selected_parameters(parameters_array);
-
-    $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
+    $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html", function() {
+        highlight_selected_parameters(parameters_array);
+      });
     document.querySelector(".results-container").style.opacity = '1';
     
 
@@ -2385,7 +2385,7 @@ function stringToList(str) {
         fund_attributes_selections.push('Sourcing');
     }
 
-    var items_list = document.getElementsByClassName("parameter-item active");
+    var items_list = document.getElementsByClassName("parameter-item");
     var items_list_ids = items_list.map(items_list => items_list.id);
 
     for (i = 0; i < items_list_ids.length; i++) {
