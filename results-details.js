@@ -2369,19 +2369,19 @@ function stringToList(str) {
 
   function highlight_selected_parameters(list) {
     fund_attributes_selections = []
-    if (list.contains('Team')) {
+    if (list.includes('Team')) {
         fund_attributes_selections.push('Team');
     }
-    if (list.contains('Value-Add')) {
+    if (list.includes('Value-Add')) {
         fund_attributes_selections.push('Value-Add');
     }
-    if (list.contains('Track-Record')) {
+    if (list.includes('Track-Record')) {
         fund_attributes_selections.push('Track-Record');
     }
-    if (list.contains('Firm-Management')) {
+    if (list.includes('Firm-Management')) {
         fund_attributes_selections.push('Firm-Management');
     }
-    if (list.contains('Sourcing')) {
+    if (list.includes('Sourcing')) {
         fund_attributes_selections.push('Sourcing');
     }
 
@@ -2389,7 +2389,7 @@ function stringToList(str) {
     var items_list_ids = items_list.map(items_list => items_list.id);
 
     for (i = 0; i < items_list_ids.length; i++) {
-        if (list.contains(items_list_ids[i])) {
+        if (list.includes(items_list_ids[i])) {
             items_list[i].classList.add("active");
         }
     }
