@@ -171,7 +171,6 @@ function update_results(element) {
     stage_selections = [];
     sector_selections = [];
     risk_return_selections = [];
-    fund_attributes_selections = [];
 
     selection_array = [0,[0],0,[0,0]];
     parameters_array = [];
@@ -2340,7 +2339,7 @@ function stringToList(str) {
     
     return list;
   }
-  
+
   function findAndReplace(arrays, value, replace) {
     return arrays = arrays.map(function(item) { return item == value ? replace : item; });
   };
