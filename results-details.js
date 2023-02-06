@@ -22,15 +22,28 @@ window.addEventListener("scroll", function() {
     }   
 });
 
+var stage_selections = [];
+var sector_selections = [];
+var risk_return_selections = [];
+var fund_attributes_selections = [];
+
+var selection_array = [0,[0],0,[0,0]];
+var parameters_array = [];
+
 var page_number = 1;
 var selection_indexes = '';
 
 requestAnimationFrame(function() {
     // your code here
 
-    selection_indexes = JSON.parse(window.location.href.split("?")[1]);
+    selection_indexes = JSON.parse(window.location.href.split("?")[1].split("&")[0]);
     console.log(selection_indexes);
     checkNumbers(selection_indexes);
+    
+    parameters_array = window.location.href.split("?")[1].split("&")[0];
+    parameters_array = stringToList(parameters_array);
+
+    highlight_selected_parameters(parameters_array);
 
     $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
     document.querySelector(".results-container").style.opacity = '1';
@@ -152,6 +165,43 @@ function expand_row(element) {
         // element.parentElement.nextElementSibling.firstElementChild.style.border = "0";
         // element.parentElement.nextElementSibling.firstElementChild.style.borderTop = "0";
     }
+}
+
+function update_results(element) {
+    stage_selections = [];
+    sector_selections = [];
+    risk_return_selections = [];
+    fund_attributes_selections = [];
+
+    selection_array = [0,[0],0,[0,0]];
+    parameters_array = [];
+
+    var active_list = document.getElementsByClassName("parameter-item active");
+    var active_list_ids = active_list.map(active_list => active_list.id);
+    var possibilites_blah = ['Idea', 'Early', 'Growth', 'Consumer', 'Enterprise', 'Deep-Tech', 'FinTech', 'Impact', 'Life-Sciences', 'Web3', 'Agnostic', 'Lower', 'Moderate', 'High'];
+    for (let i = 0; i < active_list_ids.length; i++) {
+        for (let j = 0; j < possibilites_blah.length; j++) {
+          if (active_list_ids[i] === possibilites_blah[j]) {
+            parameters_array.push(active_list_ids[i]);
+            if (j <= 2) {
+                stage_selections.push(active_list_ids[i]); 
+            } else if (j <= 10) {
+                sector_selections.push(active_list_ids[i]);
+            } else {
+                risk_return_selections.push(active_list_ids[i]);
+            }
+            break;
+          }
+        }
+      }
+
+    parameters_array = parameters_array.concat(fund_attributes_selections);
+    
+    selection_array = convertSelections(stage_selections, sector_selections, risk_return_selections, fund_attributes_selections);
+    
+    window.location.replace("https://explorevc.webflow.io/wizard/results/?" + JSON.stringify(selection_array) + "&" + parameters_array);
+
+
 }
 
 function generatedFundsList(selection_array) {
@@ -2280,3 +2330,70 @@ function generate_overview_box(risk_index) {
     }
 }
 
+function stringToList(str) {
+    // Remove square brackets
+    str = str.substring(1, str.length - 1);
+    
+    // Split the string by commas
+    let list = str.split(",");
+    
+    return list;
+  }
+
+  function convertSelections(stage_selections, sector_selections, risk_return_selections, fund_attributes_selections) {
+    stage_selections = findAndReplace(stage_selections, "Idea", 1);
+    stage_selections = findAndReplace(stage_selections, "Early", 2);
+    stage_selections = findAndReplace(stage_selections, "Growth", 3);
+    stage_selections = stage_selections.reduce((a, b) => a + b) / stage_selections.length;
+  
+    sector_selections = findAndReplace(sector_selections, "Consumer", 1);
+    sector_selections = findAndReplace(sector_selections, "Enterprise", 2);
+    sector_selections = findAndReplace(sector_selections, "Deep-Tech", 3);
+    sector_selections = findAndReplace(sector_selections, "FinTech", 4);
+    sector_selections = findAndReplace(sector_selections, "Impact", 5);
+    sector_selections = findAndReplace(sector_selections, "Life-Sciences", 6);
+    sector_selections = findAndReplace(sector_selections, "Web3", 7);
+    sector_selections = findAndReplace(sector_selections, "Agnostic", 8);
+  
+    risk_return_selections = findAndReplace(risk_return_selections, "Low", 1);
+    risk_return_selections = findAndReplace(risk_return_selections, "Moderate", 2);
+    risk_return_selections = findAndReplace(risk_return_selections, "High", 3);
+    risk_return_selections = risk_return_selections.reduce((a, b) => a + b) / risk_return_selections.length;
+  
+    fund_attributes_selections = findAndReplace(fund_attributes_selections, "Team", 1);
+    fund_attributes_selections = findAndReplace(fund_attributes_selections, "Value-Add", 2);
+    fund_attributes_selections = findAndReplace(fund_attributes_selections, "Sourcing", 3);
+    fund_attributes_selections = findAndReplace(fund_attributes_selections, "Track-Record", 4);
+    fund_attributes_selections = findAndReplace(fund_attributes_selections, "Firm-Management", 5);
+  
+    return [stage_selections, sector_selections, risk_return_selections, fund_attributes_selections];
+  
+  };
+
+  function highlight_selected_parameters(list) {
+    fund_attributes_selections = []
+    if (list.contains('Team')) {
+        fund_attributes_selections.push('Team');
+    }
+    if (list.contains('Value-Add')) {
+        fund_attributes_selections.push('Value-Add');
+    }
+    if (list.contains('Track-Record')) {
+        fund_attributes_selections.push('Track-Record');
+    }
+    if (list.contains('Firm-Management')) {
+        fund_attributes_selections.push('Firm-Management');
+    }
+    if (list.contains('Sourcing')) {
+        fund_attributes_selections.push('Sourcing');
+    }
+
+    var items_list = document.getElementsByClassName("parameter-item active");
+    var items_list_ids = items_list.map(items_list => items_list.id);
+
+    for (i = 0; i < items_list_ids.length; i++) {
+        if (list.contains(items_list_ids[i])) {
+            items_list[i].classList.add("active");
+        }
+    }
+  }

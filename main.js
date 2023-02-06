@@ -49,6 +49,7 @@ var fund_attributes_selections = [];
 var fund_attributes_rank = 0;
 
 var selection_array = [0,[0],0,[0,0]];
+parameters_array = [];
 
 var page_loaded = true;
 var started_blah = false;
@@ -410,6 +411,7 @@ function next_page() {
 
       
       selection_array = convertSelections(stage_selections, sector_selections, risk_return_selections, fund_attributes_selections);
+      parameters_array = [...stage_selections, ...sector_selections, ...risk_return_selections, ...fund_attributes_selections];
       console.log(selection_array);
 
       setTimeout(function() {
@@ -426,7 +428,7 @@ function next_page() {
         document.querySelector('#background-rect-mobile').setAttribute('style', 'transform: translateY(-2500px); transition: transform 1250ms ease-out; transition-delay: 900ms');
       }, 1000); 
       setTimeout(function() {
-        window.location.replace("https://explorevc.webflow.io/wizard/results/?" + JSON.stringify(selection_array));
+        window.location.replace("https://explorevc.webflow.io/wizard/results/?" + JSON.stringify(selection_array) + "&" + parameters_array);
       }, 1250)
       break;
   }
