@@ -181,7 +181,7 @@ function update_results(element) {
         var id = active_list[i].id;
         active_list_ids.push(id);
       }
-    var possibilites_blah = ['Idea', 'Early', 'Growth', 'Consumer', 'Enterprise', 'Deep-Tech', 'FinTech', 'Impact', 'Life-Sciences', 'Web3', 'Agnostic', 'Lower', 'Moderate', 'High'];
+    var possibilites_blah = ['Idea', 'Early', 'Growth', 'Consumer', 'Enterprise', 'Deep-Tech', 'FinTech', 'Impact', 'Life-Sciences', 'Web3', 'Agnostic', 'Low', 'Moderate', 'High'];
     for (let i = 0; i < active_list_ids.length; i++) {
         for (let j = 0; j < possibilites_blah.length; j++) {
           if (active_list_ids[i] === possibilites_blah[j]) {
