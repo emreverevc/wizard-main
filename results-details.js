@@ -40,7 +40,7 @@ requestAnimationFrame(function() {
     console.log(selection_indexes);
     checkNumbers(selection_indexes);
     
-    parameters_array = window.location.href.split("?")[1].split("&")[0];
+    parameters_array = window.location.href.split("?")[1].split("&")[1];
     parameters_array = stringToList(parameters_array);
 
     highlight_selected_parameters(parameters_array);
@@ -2330,10 +2330,7 @@ function generate_overview_box(risk_index) {
     }
 }
 
-function stringToList(str) {
-    // Remove square brackets
-    str = str.substring(1, str.length - 1);
-    
+function stringToList(str) {    
     // Split the string by commas
     let list = str.split(",");
     
