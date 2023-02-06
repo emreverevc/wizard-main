@@ -6,7 +6,7 @@
   body {
     position: relative!important;
   }
-  
+
   .left {
     display: none!important;
   }
@@ -111,6 +111,13 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .parameters-container {
+    display: none;
+  }
+
+}
+
 .body-class {
     /* background-color: #182C50; */
     height:100%;
@@ -159,7 +166,7 @@
 
 .parameters-container {
     background-color: #182C50;
-    position: relative;
+    position: fixed;
     height: 100%;
     width: 128px;
     text-align: left;
