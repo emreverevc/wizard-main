@@ -2340,6 +2340,10 @@ function stringToList(str) {
     
     return list;
   }
+  
+  function findAndReplace(arrays, value, replace) {
+    return arrays = arrays.map(function(item) { return item == value ? replace : item; });
+  };
 
   function convertSelections(stage_selections, sector_selections, risk_return_selections, fund_attributes_selections) {
     stage_selections = findAndReplace(stage_selections, "Idea", 1);
