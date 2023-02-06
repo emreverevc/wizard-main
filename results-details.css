@@ -188,12 +188,6 @@
     top: 12.5%;
 }
 
-.parameters-title-box {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
 .parameters-title{
     margin: 25px 15px 15px 15px;
     font-family: 'DM Sans';
@@ -201,7 +195,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 31px;
-    text-align: center;
+    text-align: left;
     color: #FFFFFF;     
 }
 
