@@ -177,7 +177,11 @@ function update_results(element) {
     parameters_array = [];
 
     var active_list = document.getElementsByClassName("parameter-item active");
-    var active_list_ids = active_list.map(active_list => active_list.id);
+    var active_list_ids = [];
+    for (var i = 0; i < active_list.length; i++) {
+        var id = active_list[i].id;
+        active_list_ids.push(id);
+      }
     var possibilites_blah = ['Idea', 'Early', 'Growth', 'Consumer', 'Enterprise', 'Deep-Tech', 'FinTech', 'Impact', 'Life-Sciences', 'Web3', 'Agnostic', 'Lower', 'Moderate', 'High'];
     for (let i = 0; i < active_list_ids.length; i++) {
         for (let j = 0; j < possibilites_blah.length; j++) {
@@ -2386,7 +2390,11 @@ function stringToList(str) {
     }
 
     var items_list = document.getElementsByClassName("parameter-item");
-    var items_list_ids = items_list.map(items_list => items_list.id);
+    var items_list_ids = [];
+    for (var i = 0; i < items_list.length; i++) {
+        var id = items_list[i].id;
+        items_list_ids.push(id);
+      }
 
     for (i = 0; i < items_list_ids.length; i++) {
         if (list.includes(items_list_ids[i])) {
