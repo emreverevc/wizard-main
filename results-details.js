@@ -2455,10 +2455,10 @@ function stringToList(str) {
 
     mywindow.document.write('</body></html>');
 
-    generate_sector_bubbles(selection_indexes[1]);
-    generate_risk_gauge(selection_indexes[2]);
-    generate_category_analysis(selection_indexes[3]);
-    highlight_selected_parameters(parameters_array);
+    // generate_sector_bubbles(selection_indexes[1]);
+    // generate_risk_gauge(selection_indexes[2]);
+    // generate_category_analysis(selection_indexes[3]);
+    // highlight_selected_parameters(parameters_array);
 
     mywindow.document.close(); // necessary for IE >= 10
     mywindow.focus(); // necessary for IE >= 10
