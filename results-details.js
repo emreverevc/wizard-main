@@ -2470,10 +2470,16 @@ function stringToList(str) {
     // generate_category_analysis(selection_indexes[3]);
     // highlight_selected_parameters(parameters_array);
 
-    mywindow.document.close(); // necessary for IE >= 10
-    mywindow.focus(); // necessary for IE >= 10
-    mywindow.print();
-    mywindow.close();
+    await new Promise((resolve) => {
+        mywindow.document.close();
+        mywindow.setTimeout(resolve, 1000); // Wait for 100 milliseconds to ensure the document is fully loaded
+      });
+    
+      mywindow.focus();
+      mywindow.print();
+      mywindow.close();
+
+    
   }
 
   function shareResults() {
