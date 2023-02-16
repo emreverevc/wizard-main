@@ -2405,3 +2405,30 @@ function stringToList(str) {
         }
     }
   }
+
+  async function printResults() {
+    let mywindow = window.open('', 'PRINT', 'height=650,width=1400,top=100,left=150');
+    mywindow.document.write(`<html><head><title>hello</title>`);
+    let link = mywindow.document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'https://emreverevc.github.io/wizard-main/results-details.css';
+  
+    // Add a listener to wait for the stylesheet to load
+    let stylesheetLoaded = new Promise((resolve) => {
+      link.addEventListener('load', resolve);
+    });
+  
+    mywindow.document.head.appendChild(link);
+    mywindow.document.write('</head><body>');
+  
+    // Wait for the stylesheet to load before writing the content
+    await stylesheetLoaded;
+    mywindow.document.write(document.getElementById('results-container').innerHTML);
+  
+    mywindow.document.write('</body></html>');
+    mywindow.document.close(); // necessary for IE >= 10
+    mywindow.focus(); // necessary for IE >= 10
+    mywindow.print();
+    mywindow.close();
+  }
