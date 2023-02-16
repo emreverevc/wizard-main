@@ -2432,7 +2432,7 @@ function stringToList(str) {
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300&family=DM+Sans:wght@400;500;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet"></link>
     </style>`);
-    
+
     mywindow.document.write('</head><body>');
   
     // Wait for the stylesheet to load before writing the content
@@ -2456,7 +2456,7 @@ function stringToList(str) {
             generate_overview_box(${selection_indexes[2]});
             generate_sector_bubbles(${selection_indexes[1]});
             generate_risk_gauge(${selection_indexes[2]});
-            generate_category_analysis(${selection_indexes[3]});
+            generate_category_analysis(${selection_indexes[3].slice(0, 2)});
             generatedFundsList(${selection_indexes});
         </script>
     `);

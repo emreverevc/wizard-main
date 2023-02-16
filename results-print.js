@@ -1908,7 +1908,7 @@ function generate_heatmap(fund_info) {
 function generate_category_analysis(category_indexes) {
     
     console.log(category_indexes);
-    var top_categories = category_indexes.slice(0, 2);
+    var top_categories = category_indexes
 
     var top_category_colors = {Rating_Firm_Branding_Color: "#A6A6A6" ,Rating_Firm_LPCommunications_Color: "#A6A6A6" ,Rating_Firm_Overall_Color: "#A6A6A6" ,Rating_Firm_ServiceProvider_Color: "#A6A6A6" ,Rating_Firm_Workflow_Color: "#A6A6A6" ,Rating_Sourcing_Channels_Color: "#A6A6A6" ,Rating_Sourcing_Funnel_Color: "#A6A6A6" ,Rating_Sourcing_Overall_Color: "#A6A6A6" ,Rating_Sourcing_Signal_Color: "#A6A6A6" ,Rating_Sourcing_Winning_Color: "#A6A6A6" ,Rating_Team_Bench_Color: "#A6A6A6" ,Rating_Team_DecisionMaking_Color: "#A6A6A6" ,Rating_Team_InvestingExperience_Color: "#A6A6A6" ,Rating_Team_OperatingExperience_Color: "#A6A6A6" ,Rating_Team_Overall_Color: "#A6A6A6" ,Rating_TrackRecord_Allocations_Color: "#A6A6A6" ,Rating_TrackRecord_Coinvestors_Color: "#A6A6A6" ,Rating_TrackRecord_Historical_Color: "#A6A6A6" ,Rating_TrackRecord_Outliers_Color: "#A6A6A6" ,Rating_TrackRecord_Overall_Color: "#A6A6A6" ,Rating_ValueAdd_CommunityBuilding_Color: "#A6A6A6" ,Rating_ValueAdd_GrowthLevers_Color: "#A6A6A6" ,Rating_ValueAdd_Guidance_Color: "#A6A6A6" ,Rating_ValueAdd_Overall_Color: "#A6A6A6" ,Rating_ValueAdd_RevenueGeneration_Color: "#A6A6A6"};
     
