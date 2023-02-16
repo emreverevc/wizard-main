@@ -2436,8 +2436,8 @@ function stringToList(str) {
 
     mywindow.document.write(content);
 
-    mywindow.document.write(`<script src="https://emreverevc.github.io/wizard-main/main.js"></script>`);
-    
+    mywindow.document.write(`<script src="https://emreverevc.github.io/wizard-main/results-details.js"></script>`);
+
     mywindow.document.write(`
         <script>
             generate_overview_box(${selection_indexes[2]});
