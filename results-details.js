@@ -2425,6 +2425,14 @@ function stringToList(str) {
     });
   
     mywindow.document.head.appendChild(link);
+
+    mywindow.document.write(`<style>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300&family=DM+Sans:wght@400;500;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet"></link>
+    </style>`);
+    
     mywindow.document.write('</head><body>');
   
     // Wait for the stylesheet to load before writing the content
