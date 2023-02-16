@@ -2475,3 +2475,7 @@ function stringToList(str) {
     mywindow.print();
     mywindow.close();
   }
+
+  function shareResults() {
+    prompt("Press [Ctrl + c] to copy the url :",window.location);
+  }
