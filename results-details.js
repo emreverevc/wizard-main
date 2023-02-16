@@ -2471,7 +2471,7 @@ function stringToList(str) {
     // highlight_selected_parameters(parameters_array);
 
     mywindow.document.close(); // necessary for IE >= 10
-    // mywindow.focus(); // necessary for IE >= 10
-    // mywindow.print();
-    // mywindow.close();
+    mywindow.focus(); // necessary for IE >= 10
+    mywindow.print();
+    mywindow.close();
   }
