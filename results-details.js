@@ -97,6 +97,7 @@ function next_page() {
                 generate_sector_bubbles(selection_indexes[1]);
                 generate_risk_gauge(selection_indexes[2]);
                 generate_category_analysis(selection_indexes[3]);
+                highlight_selected_parameters(parameters_array);
               }, 250); 
             break;
         case 3:
@@ -104,6 +105,7 @@ function next_page() {
             $(".results-container").load("https://emreverevc.github.io/wizard-main/results-funds.html");
             setTimeout(function() {
                 generatedFundsList(selection_indexes)
+                highlight_selected_parameters(parameters_array);
               }, 250); 
         break;
     }
@@ -117,6 +119,7 @@ function previous_page() {
             $(".results-container").load("https://emreverevc.github.io/wizard-main/results-overview.html");
             setTimeout(function() {
                 generate_overview_box(selection_indexes[2]);
+                highlight_selected_parameters(parameters_array);
               }, 250); 
             break;
         case 2:
@@ -126,6 +129,7 @@ function previous_page() {
                 generate_sector_bubbles(selection_indexes[1]);
                 generate_risk_gauge(selection_indexes[2]);
                 generate_category_analysis(selection_indexes[3]);
+                highlight_selected_parameters(parameters_array);
               }, 250); 
             break;
         case 3:
@@ -133,6 +137,7 @@ function previous_page() {
             $(".results-container").load("https://emreverevc.github.io/wizard-main/results-funds.html");
             setTimeout(function() {
                 generatedFundsList(selection_indexes)
+                highlight_selected_parameters(parameters_array);
               }, 250); 
         break;
             
@@ -2407,7 +2412,7 @@ function stringToList(str) {
   }
 
   async function printResults() {
-    let mywindow = window.open('', 'PRINT', 'height=650,width=1400,top=100,left=150');
+    let mywindow = window.open('', 'PRINT', 'height=1123,width=794,top=96,left=120');
     mywindow.document.write(`<html><head><title>hello</title>`);
     let link = mywindow.document.createElement('link');
     link.rel = 'stylesheet';
