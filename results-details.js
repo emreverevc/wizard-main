@@ -2438,6 +2438,11 @@ function stringToList(str) {
 
     mywindow.document.write(`<script src="https://emreverevc.github.io/wizard-main/results-print.js"></script>`);
 
+    console.log(selection_indexes[2]);
+    console.log(selection_indexes[1]);
+    console.log(selection_indexes[3]);
+    console.log(selection_indexes);
+
     mywindow.document.write(`
         <script>
             generate_overview_box(${selection_indexes[2]});
@@ -2448,10 +2453,6 @@ function stringToList(str) {
         </script>
     `);
     
-    console.log(selection_indexes[2]);
-    console.log(selection_indexes[1]);
-    console.log(selection_indexes[3]);
-    console.log(selection_indexes);
 
     mywindow.document.write('</body></html>');
 
