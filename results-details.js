@@ -2413,7 +2413,7 @@ function stringToList(str) {
 
   async function printResults() {
     let mywindow = window.open('', 'PRINT', 'height=1123,width=794,top=96,left=120');
-    mywindow.document.write(`<html><head><title>hello</title>`);
+    mywindow.document.write(`<html><head><title>ExploreVC Wizard Results</title>`);
     let link = mywindow.document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
