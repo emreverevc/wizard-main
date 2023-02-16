@@ -2417,7 +2417,7 @@ function stringToList(str) {
     let link = mywindow.document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'https://emreverevc.github.io/wizard-main/results-details.css';
+    link.href = 'https://emreverevc.github.io/wizard-main/results-print.css';
   
     // Add a listener to wait for the stylesheet to load
     let stylesheetLoaded = new Promise((resolve) => {
@@ -2429,9 +2429,32 @@ function stringToList(str) {
   
     // Wait for the stylesheet to load before writing the content
     await stylesheetLoaded;
-    mywindow.document.write(document.getElementById('results-container').innerHTML);
+    
+    // Use fetch to get the HTML content
+    let response = await fetch('https://emreverevc.github.io/wizard-main/results-print.html');
+    let content = await response.text();
+
+    mywindow.document.write(content);
+
+    mywindow.document.write(`<script src="https://emreverevc.github.io/wizard-main/main.js"></script>`);
+    
+    mywindow.document.write(`
+        <script>
+            generate_overview_box(${selection_indexes[2]});
+            generate_sector_bubbles(${selection_indexes[1]});
+            generate_risk_gauge(${selection_indexes[2]});
+            generate_category_analysis(${selection_indexes[3]});
+            generatedFundsList(${selection_indexes});
+        </script>
+    `);
   
     mywindow.document.write('</body></html>');
+
+    generate_sector_bubbles(selection_indexes[1]);
+    generate_risk_gauge(selection_indexes[2]);
+    generate_category_analysis(selection_indexes[3]);
+    highlight_selected_parameters(parameters_array);
+
     mywindow.document.close(); // necessary for IE >= 10
     mywindow.focus(); // necessary for IE >= 10
     mywindow.print();
