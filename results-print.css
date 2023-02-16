@@ -382,7 +382,7 @@ img {
   .fund-row {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr; 
-    border: 1px solid black;
+    border: 1px 1px 0px 1px solid black;
     height: 80px;
     align-items:center;
     cursor: pointer;
@@ -450,14 +450,12 @@ img {
     display: flex;
     justify-content: center;
     cursor: pointer;
+    visibility: hidden;
   }
   
   .fund-more-info-container {
     padding: 0px 25px 0px 25px;
-    /* height: 0px; */
-    /* overflow: hidden;
-    transition: height 300ms ease-in; */
-    /* border-bottom: 1px solid black; */
+    border-width: 0px 1px 1px; border-top-style: initial; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: initial; border-right-color: black; border-bottom-color: black; border-left-color: black; border-image: initial;
   }
   
   .pill-row{
@@ -573,6 +571,7 @@ img {
   }
   
   .full-report {
+    display: none;
     margin: auto;
     margin-top: 15px;
     margin-bottom: 25px;
