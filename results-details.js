@@ -2447,7 +2447,12 @@ function stringToList(str) {
             generatedFundsList(${selection_indexes});
         </script>
     `);
-  
+    
+    console.log(selection_indexes[2]);
+    console.log(selection_indexes[1]);
+    console.log(selection_indexes[3]);
+    console.log(selection_indexes);
+
     mywindow.document.write('</body></html>');
 
     generate_sector_bubbles(selection_indexes[1]);
