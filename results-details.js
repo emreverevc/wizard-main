@@ -2412,6 +2412,11 @@ function stringToList(str) {
   }
 
   async function printResults() {
+
+    var item_one = selection_indexes[2];
+    var item_two = selection_indexes[1];
+    var item_three = selection_indexes[3];
+    
     let mywindow = window.open('', 'PRINT', 'height=1123,width=794,top=96,left=120');
     mywindow.document.write(`<html><head><title>hello</title>`);
     let link = mywindow.document.createElement('link');
@@ -2454,10 +2459,10 @@ function stringToList(str) {
 
     mywindow.document.write(`
         <script>
-            generate_overview_box(${selection_indexes[2]});
-            generate_sector_bubbles(${selection_indexes[1]});
-            generate_risk_gauge(${selection_indexes[2]});
-            generate_category_analysis(${selection_indexes[3].slice(0, 2)});
+            generate_overview_box(${item_one});
+            generate_sector_bubbles(${item_two});
+            generate_risk_gauge(${item_one});
+            generate_category_analysis(${item_three});
             generatedFundsList(${selection_indexes});
         </script>
     `);
